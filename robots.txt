@@ -1,1 +1,1 @@
-Sitemap: https://seguid.github.io/seguid.org/sitemap.xml
+Sitemap: https://www.seguid.org/sitemap.xml
