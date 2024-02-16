@@ -21,8 +21,7 @@ Python and R;
 * Python: package **sgeuid**
 * R: package **sgeuid**
 
-For now, you'll find these at
-<https://github.com/MetabolicEngineeringGroupCBMA/seguid>.
+For now, you'll find these at <https://github.com/seguid/seguid>.
 
 
 ## Quick examples
