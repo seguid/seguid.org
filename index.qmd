@@ -18,10 +18,9 @@ double-stranded sequences (e.g. DNA) and circular sequences
 Implementations of above SEGUID methods are currently available for
 Python and R;
 
-* Python: package **sgeuid**
-* R: package **sgeuid**
+* Python: package [**sgeuid**](https://github.com/seguid/seguid/)
+* R: package [**sgeuid**](https://github.com/seguid/seguid-r/)
 
-For now, you'll find these at <https://github.com/seguid/seguid>.
 
 
 ## Quick examples
