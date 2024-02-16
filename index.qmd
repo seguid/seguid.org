@@ -1,7 +1,65 @@
 ---
-title: "."
+title: "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences"
 ---
 
-This is a Quarto website.
+The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and
+Giometti, 2006) was introduced to provide a stable, unifying key for
+the same sequence in different databases facilitating linking protein
+sequences across databases.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+SEGUID v2 (2024) extends the original SEGUID method to support also
+double-stranded sequences (e.g. DNA) and circular sequences
+(e.g. proteins and double-stranded DNA).
+
+Implementations of above SEGUID methods are currently available for
+Python and R;
+
+* Python: package **sgeuid**
+* R: package **sgeuid**
+
+For now, you'll find these at
+<https://github.com/MetabolicEngineeringGroupCBMA/seguid>.
+
+
+## Quick examples
+
+### Python
+
+```python
+>>> from seguid import *
+
+>>> lsseguid("AT")
+'lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4'
+
+>>> cdseguid("AT", "AT")
+'cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA'
+```
+
+```sh
+$ python -m seguid --type="lsseguid" <<< "AT"
+lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4
+
+$ python -m seguid --type="cdseguid" <<< $'AT\nTA'
+cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA
+```
+
+
+### R
+
+```r
+> library(seguid)
+
+> lsseguid("AT")
+[1] "lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+
+> cdseguid("AT", "AT")
+[1] "cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"
+```
+
+```sh
+$ Rscript -e seguid::lsseguid <<< "AT"
+lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4
+
+$ Rscript -e seguid::cdseguid <<< $'AT\nTA'
+cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA
+```

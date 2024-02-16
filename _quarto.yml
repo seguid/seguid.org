@@ -3,13 +3,16 @@ project:
   output-dir: docs
   
 website:
-  title: "SEGUID"
+  title: "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
-
+  search: 
+    location: navbar
+    type: overlay
+    
 format:
   html:
     theme: cosmo
