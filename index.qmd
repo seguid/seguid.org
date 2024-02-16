@@ -32,19 +32,19 @@ For now, you'll find these at
 ```python
 >>> from seguid import *
 
->>> lsseguid("AT")
-'lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4'
+>>> ldseguid("ATATGCC", "GGCATAT")
+'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
 
->>> cdseguid("AT", "AT")
-'cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA'
+>>> cdseguid("TATGCCA", "TGGCATA")
+'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
 ```
 
 ```sh
-$ python -m seguid --type="lsseguid" <<< "AT"
-lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4
+$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
+ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ python -m seguid --type="cdseguid" <<< $'AT\nTA'
-cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA
+$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
+cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
 
 
@@ -53,17 +53,17 @@ cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA
 ```r
 > library(seguid)
 
-> lsseguid("AT")
-[1] "lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+> ldseguid("ATATGCC", "GGCATAT")
+[1] "ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
 
-> cdseguid("AT", "AT")
-[1] "cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"
+> cdseguid("TATGCCA", "TGGCATA")
+[1] "cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
 ```
 
 ```sh
-$ Rscript -e seguid::lsseguid <<< "AT"
-lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4
+$ Rscript -e seguid::seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
+ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ Rscript -e seguid::cdseguid <<< $'AT\nTA'
-cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA
+$ Rscript -e seguid::seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
+cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
