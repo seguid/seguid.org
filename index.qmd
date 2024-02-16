@@ -11,6 +11,10 @@ SEGUID v2 (2024) extends the original SEGUID method to support also
 double-stranded sequences (e.g. DNA) and circular sequences
 (e.g. proteins and double-stranded DNA).
 
+![](figures/cdseguid.png)
+
+## Availability
+
 Implementations of above SEGUID methods are currently available for
 Python and R;
 
