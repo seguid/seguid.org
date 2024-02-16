@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences - SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences</title>
+<title>SEGUID - SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences</span>
+    <span class="navbar-title">SEGUID</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -128,6 +148,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/seguid/seguid.org/"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -158,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences</h1>
+<h1 class="title">SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences</h1>
 </div>
 
 
@@ -175,8 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti, 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases.</p>
-<p>SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
+<p>The SEquence Globally Unique IDentifier (SEGUID) checksum <span class="citation" data-cites="BabniggGiometti_2006">(<a href="#ref-BabniggGiometti_2006" role="doc-biblioref">Babnigg and Giometti 2006</a>)</span> was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
 <p>Implementations of above SEGUID methods are currently available for Python and R;</p>
 <ul>
 <li>Python: package <strong>sgeuid</strong></li>
@@ -216,10 +242,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>AWD-dt5-TEua8RbOWfnctJIu9nA</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-BabniggGiometti_2006" class="csl-entry" role="listitem">
+Babnigg, György, and Carol S Giometti. 2006. <span>“<span class="nocase">A database of unique protein sequence identifiers for proteome studies</span>.”</span> <em>Proteomics</em> 6 (16): 4514–22. <a href="https://doi.org/10.1002/pmic.200600032">https://doi.org/10.1002/pmic.200600032</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
