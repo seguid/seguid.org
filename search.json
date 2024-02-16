@@ -4,7 +4,14 @@
     "href": "index.html",
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "",
-    "text": "The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA).\nImplementations of above SEGUID methods are currently available for Python and R;\nFor now, you’ll find these at https://github.com/MetabolicEngineeringGroupCBMA/seguid."
+    "text": "The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
+  },
+  {
+    "objectID": "index.html#availability",
+    "href": "index.html#availability",
+    "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
+    "section": "Availability",
+    "text": "Availability\nImplementations of above SEGUID methods are currently available for Python and R;\n\nPython: package sgeuid\nR: package sgeuid\n\nFor now, you’ll find these at https://github.com/MetabolicEngineeringGroupCBMA/seguid."
   },
   {
     "objectID": "index.html#quick-examples",

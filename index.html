@@ -172,7 +172,8 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quick-examples" id="toc-quick-examples" class="nav-link active" data-scroll-target="#quick-examples">Quick examples</a>
+  <li><a href="#availability" id="toc-availability" class="nav-link active" data-scroll-target="#availability">Availability</a></li>
+  <li><a href="#quick-examples" id="toc-quick-examples" class="nav-link" data-scroll-target="#quick-examples">Quick examples</a>
   <ul class="collapse">
   <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
@@ -203,12 +204,16 @@ div.csl-indent {
 
 
 <p>The SEquence Globally Unique IDentifier (SEGUID) checksum <span class="citation" data-cites="BabniggGiometti_2006">(<a href="#ref-BabniggGiometti_2006" role="doc-biblioref">Babnigg and Giometti 2006</a>)</span> was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
+<p><img src="figures/cdseguid.png" class="img-fluid"></p>
+<section id="availability" class="level2">
+<h2 class="anchored" data-anchor-id="availability">Availability</h2>
 <p>Implementations of above SEGUID methods are currently available for Python and R;</p>
 <ul>
 <li>Python: package <strong>sgeuid</strong></li>
 <li>R: package <strong>sgeuid</strong></li>
 </ul>
 <p>For now, you’ll find these at <a href="https://github.com/MetabolicEngineeringGroupCBMA/seguid" class="uri">https://github.com/MetabolicEngineeringGroupCBMA/seguid</a>.</p>
+</section>
 <section id="quick-examples" class="level2">
 <h2 class="anchored" data-anchor-id="quick-examples">Quick examples</h2>
 <section id="python" class="level3">
