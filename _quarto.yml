@@ -3,15 +3,20 @@ project:
   output-dir: docs
   
 website:
-  title: "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences"
+  title: "SEGUID"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+    right:
+      - icon: github
+        href: https://github.com/seguid/seguid.org/
+        aria-label: GitHub      
   search: 
     location: navbar
     type: overlay
+  repo-url: https://github.com/seguid/seguid.org/
     
 format:
   html:
