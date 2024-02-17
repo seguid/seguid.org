@@ -11,7 +11,7 @@
     "href": "index.html#availability",
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Availability",
-    "text": "Availability\nImplementations of above SEGUID methods are currently available for Python and R;\n\nPython: package sgeuid\nR: package sgeuid"
+    "text": "Availability\nImplementations of above SEGUID methods are currently available for Python and R;\n\nsgeuid (Python package)\nsgeuid (R package)"
   },
   {
     "objectID": "index.html#quick-examples",
