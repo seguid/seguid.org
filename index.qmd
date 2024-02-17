@@ -14,18 +14,9 @@ double-stranded sequences (e.g. DNA) and circular sequences
 ![](figures/cdseguid.png)
 
 
-## Availability
+## Examples
 
-Implementations of above SEGUID methods are currently available for
-Python and R;
-
-* [**sgeuid**](https://github.com/seguid/seguid-python/) (Python package)
-* [**sgeuid**](https://seguid-r.seguid.org/) (R package)
-
-
-
-
-## Quick examples
+::: {.panel-tabset}
 
 ### Python
 
@@ -39,15 +30,6 @@ Python and R;
 'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
 ```
 
-```sh
-$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
-ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
-
-$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
-cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
-```
-
-
 ### R
 
 ```r
@@ -60,6 +42,21 @@ cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 [1] "cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
 ```
 
+
+### CLI (Python)
+
+
+```sh
+$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
+ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+
+$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
+cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+```
+
+
+### CLI (R)
+
 ```sh
 $ Rscript -e seguid::seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
@@ -67,3 +64,15 @@ ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 $ Rscript -e seguid::seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
+
+:::
+
+
+
+## Availability
+
+Implementations of above SEGUID methods are currently available for
+Python and R;
+
+* [**sgeuid**](https://github.com/seguid/seguid-python/) (Python package)
+* [**sgeuid**](https://seguid-r.seguid.org/) (R package)
