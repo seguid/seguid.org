@@ -19,7 +19,7 @@ Implementations of above SEGUID methods are currently available for
 Python and R;
 
 * Python: package [**sgeuid**](https://github.com/seguid/seguid-python/)
-* R: package [**sgeuid**](https://github.com/seguid/seguid-r/)
+* R: package [**sgeuid**](https://seguid-r.seguid.org/)
 
 
 
