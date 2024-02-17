@@ -21,17 +21,17 @@
     "text": "The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
   },
   {
+    "objectID": "index.html#examples",
+    "href": "index.html#examples",
+    "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
+    "section": "Examples",
+    "text": "Examples\n\nPythonRCLI (Python)CLI (R)\n\n\n&gt;&gt;&gt; from seguid import *\n\n&gt;&gt;&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n\n&gt;&gt;&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n\n\n&gt; library(seguid)\n\n&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n[1] \"ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n\n&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n[1] \"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n\n\n$ python -m seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n\n$ Rscript -e seguid::seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
+  },
+  {
     "objectID": "index.html#availability",
     "href": "index.html#availability",
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Availability",
     "text": "Availability\nImplementations of above SEGUID methods are currently available for Python and R;\n\nsgeuid (Python package)\nsgeuid (R package)"
-  },
-  {
-    "objectID": "index.html#quick-examples",
-    "href": "index.html#quick-examples",
-    "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
-    "section": "Quick examples",
-    "text": "Quick examples\n\nPython\n&gt;&gt;&gt; from seguid import *\n\n&gt;&gt;&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n\n&gt;&gt;&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n$ python -m seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n\nR\n&gt; library(seguid)\n\n&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n[1] \"ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n\n&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n[1] \"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n$ Rscript -e seguid::seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
   }
 ]

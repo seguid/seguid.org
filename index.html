@@ -191,12 +191,8 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#availability" id="toc-availability" class="nav-link active" data-scroll-target="#availability">Availability</a></li>
-  <li><a href="#quick-examples" id="toc-quick-examples" class="nav-link" data-scroll-target="#quick-examples">Quick examples</a>
-  <ul class="collapse">
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  </ul></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#availability" id="toc-availability" class="nav-link" data-scroll-target="#availability">Availability</a></li>
   </ul>
 </nav>
     </div>
@@ -224,18 +220,12 @@ div.csl-indent {
 
 <p>The SEquence Globally Unique IDentifier (SEGUID) checksum <span class="citation" data-cites="BabniggGiometti_2006">(<a href="#ref-BabniggGiometti_2006" role="doc-biblioref">Babnigg and Giometti 2006</a>)</span> was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
 <p><img src="figures/cdseguid.png" class="img-fluid"></p>
-<section id="availability" class="level2">
-<h2 class="anchored" data-anchor-id="availability">Availability</h2>
-<p>Implementations of above SEGUID methods are currently available for Python and R;</p>
-<ul>
-<li><a href="https://github.com/seguid/seguid-python/"><strong>sgeuid</strong></a> (Python package)</li>
-<li><a href="https://seguid-r.seguid.org/"><strong>sgeuid</strong></a> (R package)</li>
-</ul>
-</section>
-<section id="quick-examples" class="level2">
-<h2 class="anchored" data-anchor-id="quick-examples">Quick examples</h2>
-<section id="python" class="level3">
-<h3 class="anchored" data-anchor-id="python">Python</h3>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">CLI (Python)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">CLI (R)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> seguid <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ldseguid(<span class="st">"ATATGCC"</span>, <span class="st">"GGCATAT"</span>)</span>
@@ -243,30 +233,43 @@ div.csl-indent {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cdseguid(<span class="st">"TATGCCA"</span>, <span class="st">"TGGCATA"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="r" class="level3">
-<h3 class="anchored" data-anchor-id="r">R</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(seguid)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ldseguid</span>(<span class="st">"ATATGCC"</span>, <span class="st">"GGCATAT"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"TATGCCA"</span>, <span class="st">"TGGCATA"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(seguid)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ldseguid</span>(<span class="st">"ATATGCC"</span>, <span class="st">"GGCATAT"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"TATGCCA"</span>, <span class="st">"TGGCATA"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
-
+</div>
+</div>
+</div>
 </section>
+<section id="availability" class="level2">
+<h2 class="anchored" data-anchor-id="availability">Availability</h2>
+<p>Implementations of above SEGUID methods are currently available for Python and R;</p>
+<ul>
+<li><a href="https://github.com/seguid/seguid-python/"><strong>sgeuid</strong></a> (Python package)</li>
+<li><a href="https://seguid-r.seguid.org/"><strong>sgeuid</strong></a> (R package)</li>
+</ul>
+
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
