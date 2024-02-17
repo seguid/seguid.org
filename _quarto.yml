@@ -8,14 +8,22 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - text: Available Software
+        menu:
+          - text: <strong>seguid</strong> (Python package)
+            url:  https://github.com/seguid/seguid-python/
+          - text: <strong>seguid</strong> (R package)
+            url:  https://seguid-r.seguid.org
       - about.qmd
     right:
       - icon: github
         href: https://github.com/seguid/seguid.org/
-        aria-label: GitHub      
+        aria-label: GitHub
+        
   search: 
     location: navbar
     type: overlay
+    
   repo-url: https://github.com/seguid/seguid.org/
     
 format:
