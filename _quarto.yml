@@ -6,14 +6,15 @@ website:
   title: "SEGUID"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: Home
+        href: index.qmd
       - text: Available Software
         menu:
           - text: <strong>seguid</strong> (Python package)
             url:  https://github.com/seguid/seguid-python/
           - text: <strong>seguid</strong> (R package)
             url:  https://seguid-r.seguid.org
+      - publications.qmd
       - about.qmd
     right:
       - icon: github

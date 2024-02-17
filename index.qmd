@@ -13,6 +13,7 @@ double-stranded sequences (e.g. DNA) and circular sequences
 
 ![](figures/cdseguid.png)
 
+
 ## Availability
 
 Implementations of above SEGUID methods are currently available for
@@ -20,6 +21,7 @@ Python and R;
 
 * [**sgeuid**](https://github.com/seguid/seguid-python/) (Python package)
 * [**sgeuid**](https://seguid-r.seguid.org/) (R package)
+
 
 
 
