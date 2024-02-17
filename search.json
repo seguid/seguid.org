@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. https://doi.org/10.1002/pmic.200600032."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
@@ -19,12 +33,5 @@
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Quick examples",
     "text": "Quick examples\n\nPython\n&gt;&gt;&gt; from seguid import *\n\n&gt;&gt;&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n\n&gt;&gt;&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'\n$ python -m seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n\nR\n&gt; library(seguid)\n\n&gt; ldseguid(\"ATATGCC\", \"GGCATAT\")\n[1] \"ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n\n&gt; cdseguid(\"TATGCCA\", \"TGGCATA\")\n[1] \"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\"\n$ Rscript -e seguid::seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\\nTATACGG'\nldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g\n\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; $'TATGCCA\\nATACGGT'\ncdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
