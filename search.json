@@ -7,13 +7,6 @@
     "text": "Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. https://doi.org/10.1002/pmic.200600032."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
@@ -33,5 +26,19 @@
     "title": "SEGUID: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Availability",
     "text": "Availability\nImplementations of above SEGUID methods are currently available for Python and R;\n\nsgeuid (Python package)\nsgeuid (R package)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "quality.html",
+    "href": "quality.html",
+    "title": "Quality",
+    "section": "",
+    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
   }
 ]
