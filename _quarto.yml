@@ -14,6 +14,7 @@ website:
             url:  https://github.com/seguid/seguid-python/
           - text: <strong>seguid</strong> (R package)
             url:  https://seguid-r.seguid.org
+      - quality.qmd
       - publications.qmd
       - about.qmd
     right:
