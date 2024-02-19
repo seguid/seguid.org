@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "",
-    "text": "The SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
+    "text": "WARNING: This is work under construction! Please do not use this in production until we’ve offically released SEGUID v2.\nThe SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
   },
   {
     "objectID": "index.html#examples",
