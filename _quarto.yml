@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "SEGUID"
+  title: "SEGUID v2"
   navbar:
     left:
       - text: Home
