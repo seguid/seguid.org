@@ -79,5 +79,5 @@ cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 Implementations of above SEGUID methods are currently available for
 Python and R;
 
-* [**sgeuid**](https://github.com/seguid/seguid-python/) (Python package)
-* [**sgeuid**](https://seguid-r.seguid.org/) (R package)
+* [**seguid**](https://github.com/seguid/seguid-python/) (Python package)
+* [**seguid**](https://seguid-r.seguid.org/) (R package)
