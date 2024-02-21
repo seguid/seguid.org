@@ -209,17 +209,17 @@ ul.task-list li input[type="checkbox"] {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = [''];
+globalThis.qwebrInstallRPackagesList = ['seguid'];
 
 // Specify possible locations to search for the repository
-globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
+globalThis.qwebrPackageRepoURLS = ['https://seguid.r-universe.dev', 'https://repo.r-wasm.org', 'https://repo.r-wasm.org/'];
 
 // Check to see if we have an empty array, if we do set to skip the installation.
 globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1);
 globalThis.qwebrAutoloadRPackages = true;
 
 // Display a startup message?
-globalThis.qwebrShowStartupMessage = true;
+globalThis.qwebrShowStartupMessage = false;
 globalThis.qwebrShowHeaderMessage = false;
 
 // Describe the webR settings that should be used
@@ -231,7 +231,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"dpi":72,"context":"interactive","results":"markup","output":"true","message":"true","out-width":"700px","comment":"","fig-cap":"","warning":"true","autorun":"false","classes":"","label":"unnamed-chunk-1","fig-height":5,"fig-width":7,"out-height":""},"code":"fit = lm(mpg ~ am, data = mtcars)\nsummary(fit)","id":1}];
+globalThis.qwebrCellDetails = [{"options":{"label":"unnamed-chunk-1","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"lsseguid(\"GATTACA\")","id":1},{"options":{"label":"unnamed-chunk-2","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":2},{"options":{"label":"unnamed-chunk-3","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":3},{"options":{"label":"unnamed-chunk-4","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"csseguid(\"GATTACA\")","id":4},{"options":{"label":"unnamed-chunk-5","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":5},{"options":{"label":"unnamed-chunk-6","context":"interactive","results":"markup","output":"true","classes":"","autorun":"false","fig-height":5,"comment":"","dpi":72,"warning":"true","fig-cap":"","message":"true","fig-width":7,"out-height":"","out-width":"700px"},"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":6}];
 
 </script>
 <script type="module">
@@ -988,6 +988,17 @@ globalThis.qwebrExecuteCode = async function (
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Demo</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-demo">    
+        <li>
+    <a class="dropdown-item" href="./demo-webr.html">
+ <span class="dropdown-text">Demo: R package <strong>seguid</strong></span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./quality.html"> 
 <span class="menu-text">Quality</span></a>
@@ -1019,7 +1030,21 @@ globalThis.qwebrExecuteCode = async function (
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#linear-single-stranded-dna" id="toc-linear-single-stranded-dna" class="nav-link" data-scroll-target="#linear-single-stranded-dna">Linear, single-stranded DNA</a></li>
+  <li><a href="#linear-double-stranded-dna" id="toc-linear-double-stranded-dna" class="nav-link" data-scroll-target="#linear-double-stranded-dna">Linear, double-stranded DNA</a></li>
+  <li><a href="#staggered-linear-double-stranded-dna" id="toc-staggered-linear-double-stranded-dna" class="nav-link" data-scroll-target="#staggered-linear-double-stranded-dna">Staggered linear, double-stranded DNA</a></li>
+  <li><a href="#circular-single-stranded-dna" id="toc-circular-single-stranded-dna" class="nav-link" data-scroll-target="#circular-single-stranded-dna">Circular, single-stranded DNA</a></li>
+  <li><a href="#circular-double-stranded-dna" id="toc-circular-double-stranded-dna" class="nav-link" data-scroll-target="#circular-double-stranded-dna">Circular, double-stranded DNA</a></li>
+  <li><a href="#protein-sequence" id="toc-protein-sequence" class="nav-link" data-scroll-target="#protein-sequence">Protein sequence</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1216,11 +1241,43 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>This is a webr-enabled code cell in a Quarto HTML document.</p>
+<p>This is an online demo of the R package <strong><a href="https://seguid-r.seguid.org/">seguid</a></strong> and the SEGUID v2 algorithm. The below examples run an R instance completely within your web browser based on <a href="https://docs.r-wasm.org/webr/latest/">webR</a> and <a href="https://webassembly.org/">WebAssembly</a>.</p>
+<p>To run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enters below leaves your web browser. See <strong><a href="https://seguid-r.seguid.org/">seguid</a></strong> for the details on these functions, including what type of arguments they take.</p>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<section id="linear-single-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="linear-single-stranded-dna">Linear, single-stranded DNA</h3>
 <div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="linear-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="linear-double-stranded-dna">Linear, double-stranded DNA</h3>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="staggered-linear-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="staggered-linear-double-stranded-dna">Staggered linear, double-stranded DNA</h3>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="circular-single-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="circular-single-stranded-dna">Circular, single-stranded DNA</h3>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="circular-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="circular-double-stranded-dna">Circular, double-stranded DNA</h3>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="protein-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="protein-sequence">Protein sequence</h3>
+<div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
