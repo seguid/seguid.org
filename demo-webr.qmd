@@ -53,11 +53,19 @@ csseguid("GATTACA")
 cdseguid("GATTACA", "TGTAATC")
 ```
 
-### Protein sequence
+### Protein
 
 ```{webr-r}
 lsseguid("QSALTQPASV", alphabet = "{protein}")
 ```
+
+
+### Expanded epigenetic double-stranded DNA
+
+```{webr-r}
+ldseguid("TTGmGCAA", "TTGC1CAA", alphabet = "{DNA},m1,h2,f3,c4")
+```
+
 
 
 [seguid]: https://seguid-r.seguid.org/
