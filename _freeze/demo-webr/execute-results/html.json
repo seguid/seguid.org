@@ -1,9 +1,11 @@
 {
-  "hash": "5bc49b4225c666719ceaefe19d35f504",
+  "hash": "56c15e16ff34268a75085e3ff562c86f",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: webR in Quarto HTML Documents\nformat: html\nengine: knitr\nfilters:\n  - webr\n---\n\n\nThis is a webr-enabled code cell in a Quarto HTML document.\n\n```{webr-r}\nfit = lm(mpg ~ am, data = mtcars)\nsummary(fit)\n```\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Demo: R package seguid\"\nformat: html\nengine: knitr\nfilters:\n  - webr\n---\n\n\nThis is a webr-enabled code cell in a Quarto HTML document.\n\n```{webr-r}\nfit = lm(mpg ~ am, data = mtcars)\nsummary(fit)\n```\n",
+    "supporting": [
+      "demo-webr_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

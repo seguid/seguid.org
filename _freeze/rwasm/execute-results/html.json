@@ -1,8 +1,8 @@
 {
-  "hash": "5bc49b4225c666719ceaefe19d35f504",
+  "hash": "20be879108e8da86ac5caf5c26dc6de9",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: webR in Quarto HTML Documents\nformat: html\nengine: knitr\nfilters:\n  - webr\n---\n\n\nThis is a webr-enabled code cell in a Quarto HTML document.\n\n```{webr-r}\nfit = lm(mpg ~ am, data = mtcars)\nsummary(fit)\n```\n",
+    "markdown": "---\ntitle: \"Demo: R package seguid\"\nformat: html\nengine: knitr\nfilters:\n  - webr\n---\n\n\nThis is a webr-enabled code cell in a Quarto HTML document.\n\n```{webr-r}\nfit = lm(mpg ~ am, data = mtcars)\nsummary(fit)\n```\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

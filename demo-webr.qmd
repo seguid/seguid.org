@@ -1,5 +1,5 @@
 ---
-title: webR in Quarto HTML Documents
+title: "Demo: R package seguid"
 format: html
 engine: knitr
 filters:

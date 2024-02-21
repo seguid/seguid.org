@@ -5,3 +5,6 @@ assert_quarto:
 
 preview: assert_quarto
 	quarto preview
+
+render: assert_quarto
+	quarto render
