@@ -14,7 +14,7 @@ website:
             url:  https://github.com/seguid/seguid-python/
           - text: "<strong>seguid</strong> (R package)"
             url:  https://seguid-r.seguid.org
-      - text: Demo
+      - text: Live Demo
         menu:
           - text: "Demo: R package <strong>seguid</strong>"
             href: demo-webr.html
