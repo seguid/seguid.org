@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.seguid.org/publications.html</loc>
-    <lastmod>2024-02-20T18:22:49.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.seguid.org/index.html</loc>
-    <lastmod>2024-02-20T18:22:49.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.seguid.org/about.html</loc>
-    <lastmod>2024-02-20T18:22:49.978Z</lastmod>
+    <lastmod>2024-02-21T01:44:31.381Z</lastmod>
   </url>
   <url>
     <loc>https://www.seguid.org/quality.html</loc>
-    <lastmod>2024-02-20T18:22:49.978Z</lastmod>
+    <lastmod>2024-02-21T01:44:31.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/about.html</loc>
+    <lastmod>2024-02-21T01:44:31.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/index.html</loc>
+    <lastmod>2024-02-21T01:44:31.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/demo-webr.html</loc>
+    <lastmod>2024-02-21T01:44:31.381Z</lastmod>
   </url>
 </urlset>
