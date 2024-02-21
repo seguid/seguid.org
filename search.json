@@ -44,7 +44,7 @@
   {
     "objectID": "demo-webr.html",
     "href": "demo-webr.html",
-    "title": "webR in Quarto HTML Documents",
+    "title": "Demo: R package seguid",
     "section": "",
     "text": "This is a webr-enabled code cell in a Quarto HTML document.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
