@@ -1,11 +1,9 @@
 {
-  "hash": "56c15e16ff34268a75085e3ff562c86f",
+  "hash": "0662bf2699a42160ced48607a95685f2",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Demo: R package seguid\"\nformat: html\nengine: knitr\nfilters:\n  - webr\n---\n\n\nThis is a webr-enabled code cell in a Quarto HTML document.\n\n```{webr-r}\nfit = lm(mpg ~ am, data = mtcars)\nsummary(fit)\n```\n",
-    "supporting": [
-      "demo-webr_files"
-    ],
+    "markdown": "---\ntitle: \"Demo: R package seguid\"\nformat: html\nengine: knitr\nfilters:\n  - webr\nwebr:\n  show-startup-message: false\n  repos: [\"https://seguid.r-universe.dev\", \"https://repo.r-wasm.org\"]\n  packages: [\"seguid\"]\n  autoload-packages: true\n---\n\n\nThis is an online demo of the R package **[seguid]** and the SEGUID v2\nalgorithm.  The below examples run an R instance completely within\nyour web browser based on [webR] and [WebAssembly].\n\nTo run the examples, click 'Run Code'. Feel free to edit any of them\nas you prefer. Nothing you type or enters below leaves your web\nbrowser.  See **[seguid]** for the details on these functions,\nincluding what type of arguments they take.\n\n\n## Examples\n\n### Linear, single-stranded DNA\n\n```{webr-r}\nlsseguid(\"GATTACA\")\n```\n\n### Linear, double-stranded DNA\n\n```{webr-r}\nldseguid(\"GATTACA\", \"TGTAATC\")\n```\n\n### Staggered linear, double-stranded DNA\n\n```{webr-r}\nldseguid(\"-ATTACA\", \"--TAATC\")\n```\n\n### Circular, single-stranded DNA\n\n```{webr-r}\ncsseguid(\"GATTACA\")\n```\n\n### Circular, double-stranded DNA\n\n```{webr-r}\ncdseguid(\"GATTACA\", \"TGTAATC\")\n```\n\n### Protein sequence\n\n```{webr-r}\nlsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")\n```\n\n\n[seguid]: https://seguid-r.seguid.org/\n[webR]: https://docs.r-wasm.org/webr/latest/\n[WebAssembly]: https://webassembly.org/\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

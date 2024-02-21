@@ -10,10 +10,14 @@ website:
         href: index.qmd
       - text: Available Software
         menu:
-          - text: <strong>seguid</strong> (Python package)
+          - text: "<strong>seguid</strong> (Python package)"
             url:  https://github.com/seguid/seguid-python/
-          - text: <strong>seguid</strong> (R package)
+          - text: "<strong>seguid</strong> (R package)"
             url:  https://seguid-r.seguid.org
+      - text: Demo
+        menu:
+          - text: "Demo: R package <strong>seguid</strong>"
+            href: demo-webr.html
       - quality.qmd
       - publications.qmd
       - about.qmd

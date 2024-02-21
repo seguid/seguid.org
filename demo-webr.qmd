@@ -4,11 +4,63 @@ format: html
 engine: knitr
 filters:
   - webr
+webr:
+  show-startup-message: false
+  repos: ["https://seguid.r-universe.dev", "https://repo.r-wasm.org"]
+  packages: ["seguid"]
+  autoload-packages: true
 ---
 
-This is a webr-enabled code cell in a Quarto HTML document.
+This is an online demo of the R package **[seguid]** and the SEGUID v2
+algorithm.  The below examples run an R instance completely within
+your web browser based on [webR] and [WebAssembly].
+
+To run the examples, click 'Run Code'. Feel free to edit any of them
+as you prefer. Nothing you type or enters below leaves your web
+browser.  See **[seguid]** for the details on these functions,
+including what type of arguments they take.
+
+
+## Examples
+
+### Linear, single-stranded DNA
 
 ```{webr-r}
-fit = lm(mpg ~ am, data = mtcars)
-summary(fit)
+lsseguid("GATTACA")
 ```
+
+### Linear, double-stranded DNA
+
+```{webr-r}
+ldseguid("GATTACA", "TGTAATC")
+```
+
+### Staggered linear, double-stranded DNA
+
+```{webr-r}
+ldseguid("-ATTACA", "--TAATC")
+```
+
+### Circular, single-stranded DNA
+
+```{webr-r}
+csseguid("GATTACA")
+```
+
+### Circular, double-stranded DNA
+
+```{webr-r}
+cdseguid("GATTACA", "TGTAATC")
+```
+
+### Protein sequence
+
+```{webr-r}
+lsseguid("QSALTQPASV", alphabet = "{protein}")
+```
+
+
+[seguid]: https://seguid-r.seguid.org/
+[webR]: https://docs.r-wasm.org/webr/latest/
+[WebAssembly]: https://webassembly.org/
+
