@@ -19,7 +19,12 @@ double-stranded sequences (e.g. DNA) and circular sequences
 ![](figures/cdseguid.png)
 
 
-## Examples
+## Example: SEGUID v2 for circular double-stranded DNA
+
+SEGUID v2 is designed to be invariant to (i) rotation and (ii) duality
+(see above figure). No matter where we chose to "start" the dsDNA
+sequence, and no matter which strand we chose to the Watson strand,
+the checksum is identical.
 
 ::: {.panel-tabset}
 
@@ -31,7 +36,10 @@ double-stranded sequences (e.g. DNA) and circular sequences
 >>> ldseguid("ATATGCC", "GGCATAT")
 'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
 
->>> cdseguid("TATGCCA", "TGGCATA")
+>>> ldseguid("GGCATAT", "ATATGCC")          ## Same swapping Watson and Crick 
+'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
+
+>>> cdseguid("TATGCCA", "TGGCATA")          ## Same rotatating one basepair
 'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
 ```
 
@@ -43,7 +51,10 @@ double-stranded sequences (e.g. DNA) and circular sequences
 > ldseguid("ATATGCC", "GGCATAT")
 [1] "ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
 
-> cdseguid("TATGCCA", "TGGCATA")
+>>> ldseguid("GGCATAT", "ATATGCC")          ## Same swapping Watson and Crick 
+[1] "ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
+
+> cdseguid("TATGCCA", "TGGCATA")            ## Same rotatating one basepair
 [1] "cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
 ```
 
@@ -52,47 +63,42 @@ double-stranded sequences (e.g. DNA) and circular sequences
 
 
 ```sh
-$ echo -e "ATATGCC\nTATACGG" | python -m seguid --type=ldseguid
+$ echo -e 'ATATGCC\nTATACGG' | python -m seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-## Equivalent using Bash <<< syntax
-$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'  # <1>
+$ ## Same swapping Watson and Crick
+$ echo -e 'TATACGG\nATATGCC' | python -m seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ echo -e "TATGCCA\nATACGGT" | python -m seguid --type=cdseguid
-cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
-
-## Equivalent using Bash <<< syntax
-$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'  # <1>
+$ ## Same rotatating one basepair
+$ echo -e 'TATGCCA\nATACGGT' | python -m seguid --type=cdseguid
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
 
-1. The syntax `<<< $'ACGT\nTGCA'` is [Bash] syntax. The `<<<` part
-means pass the following string as input. The part `$'ACGT\nTGCA'` is
-how we can specify two string separated with a newline in Bash.
+An alternative, to "piping" a input string to the SEGUID tool, is to
+use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
+i.e. `python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'`.
 
 
 ### CLI (R)
 
 ```sh
-$ echo -e "ATATGCC\nTATACGG" | Rscript -e seguid::seguid --type=ldseguid
+$ echo -e 'ATATGCC\nTATACGG' | Rscript -e seguid::seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-## Equivalent using Bash <<< syntax
-$ Rscript -e seguid::seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'  # <1>
+$ ## Same swapping Watson and Crick
+$ echo -e 'TATACGG\nATATGCC' | Rscript -e seguid::seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ echo -e "TATGCCA\nATACGGT" | Rscript -e seguid::seguid --type=cdseguid
-cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
-
-## Equivalent using Bash <<< syntax
-$ Rscript -e seguid::seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'  # <1>
+$ ## Same rotatating one basepair
+$ echo -e 'TATGCCA\nATACGGT' | Rscript -e seguid::seguid --type=cdseguid
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
 
-1. The syntax `<<< $'ACGT\nTGCA'` is [Bash] syntax. The `<<<` part
-means pass the following string as input. The part `$'ACGT\nTGCA'` is
-how we can specify two string separated with a newline in Bash.
+An alternative, to "piping" a input string to the SEGUID tool, is to
+use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
+i.e. `Rscript -e seguid::seguid --type=ldseguid <<<
+$'ATATGCC\nTATACGG'`.
 
 :::
 
