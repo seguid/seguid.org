@@ -279,7 +279,7 @@ div.csl-indent {
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="co">## Same rotatating one basepair</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">'TATGCCA\nATACGGT'</span> <span class="kw">|</span> <span class="ex">python</span> <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>An alternative, to “piping” a input string to the SEGUID tool, is to use <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax <code>&lt;&lt;&lt;</code> and <code>$'...\n...'</code> to escape the newline, i.e.&nbsp;<code>python -m seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\nTATACGG'</code>.</p>
+<p>An alternative, to “piping” the input sequence to the SEGUID tool, is to use <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax <code>&lt;&lt;&lt;</code> and <code>$'...\n...'</code> to escape the newline, i.e.&nbsp;<code>python -m seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\nTATACGG'</code>.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">'ATATGCC\nTATACGG'</span> <span class="kw">|</span> <span class="ex">Rscript</span> <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>ldseguid</span>
@@ -292,7 +292,7 @@ div.csl-indent {
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="co">## Same rotatating one basepair</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">'TATGCCA\nATACGGT'</span> <span class="kw">|</span> <span class="ex">Rscript</span> <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>An alternative, to “piping” a input string to the SEGUID tool, is to use <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax <code>&lt;&lt;&lt;</code> and <code>$'...\n...'</code> to escape the newline, i.e.&nbsp;<code>Rscript -e seguid::seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\nTATACGG'</code>.</p>
+<p>An alternative, to “piping” the input sequence to the SEGUID tool, is to use <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax <code>&lt;&lt;&lt;</code> and <code>$'...\n...'</code> to escape the newline, i.e.&nbsp;<code>Rscript -e seguid::seguid --type=ldseguid &lt;&lt;&lt; $'ATATGCC\nTATACGG'</code>.</p>
 </div>
 </div>
 </div>
