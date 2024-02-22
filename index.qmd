@@ -75,8 +75,8 @@ $ echo -e 'TATGCCA\nATACGGT' | python -m seguid --type=cdseguid
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
 
-An alternative, to "piping" a input string to the SEGUID tool, is to
-use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
+An alternative, to "piping" the input sequence to the SEGUID tool, is
+to use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
 i.e. `python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'`.
 
 
@@ -95,8 +95,8 @@ $ echo -e 'TATGCCA\nATACGGT' | Rscript -e seguid::seguid --type=cdseguid
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
 
-An alternative, to "piping" a input string to the SEGUID tool, is to
-use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
+An alternative, to "piping" the input sequence to the SEGUID tool, is
+to use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
 i.e. `Rscript -e seguid::seguid --type=ldseguid <<<
 $'ATATGCC\nTATACGG'`.
 
