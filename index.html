@@ -262,18 +262,46 @@ div.csl-indent {
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-3"><pre class="sourceCode sh code-annotation-code code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">"ATATGCC\nTATACGG"</span> <span class="kw">|</span> <span class="ex">python</span> <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>ldseguid</span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Equivalent using Bash &lt;&lt;&lt; syntax</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-5" class="code-annotation-target"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">"TATGCCA\nATACGGT"</span> <span class="kw">|</span> <span class="ex">python</span> <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11" aria-hidden="true" tabindex="-1"></a><span class="co">## Equivalent using Bash &lt;&lt;&lt; syntax</span></span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
+<span id="annotated-cell-3-13"><a href="#annotated-cell-3-13" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="5,12" data-code-annotation="1">The syntax <code>&lt;&lt;&lt; $'ACGT\nTGCA'</code> is <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax. The <code>&lt;&lt;&lt;</code> part means pass the following string as input. The part <code>$'ACGT\nTGCA'</code> is how we can specify two string separated with a newline in Bash.</span>
+</dd>
+</dl>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-4"><pre class="sourceCode sh code-annotation-code code-with-copy code-annotated"><code class="sourceCode bash"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">"ATATGCC\nTATACGG"</span> <span class="kw">|</span> <span class="ex">Rscript</span> <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>ldseguid</span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-4-4"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Equivalent using Bash &lt;&lt;&lt; syntax</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-5" class="code-annotation-target"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>ldseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'ATATGCC</span><span class="dt">\n</span><span class="st">TATACGG'</span></span>
+<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a><span class="va">ldseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="st">"TATGCCA\nATACGGT"</span> <span class="kw">|</span> <span class="ex">Rscript</span> <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid</span>
+<span id="annotated-cell-4-9"><a href="#annotated-cell-4-9" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span>
+<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11" aria-hidden="true" tabindex="-1"></a><span class="co">## Equivalent using Bash &lt;&lt;&lt; syntax</span></span>
+<span id="annotated-cell-4-12"><a href="#annotated-cell-4-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">$'TATGCCA</span><span class="dt">\n</span><span class="st">ATACGGT'</span></span>
+<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>UnHLvKWgR_kAuUDz5D5zDYcYA7g</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="5,12" data-code-annotation="1">The syntax <code>&lt;&lt;&lt; $'ACGT\nTGCA'</code> is <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> syntax. The <code>&lt;&lt;&lt;</code> part means pass the following string as input. The part <code>$'ACGT\nTGCA'</code> is how we can specify two string separated with a newline in Bash.</span>
+</dd>
+</dl>
 </div>
 </div>
 </div>
