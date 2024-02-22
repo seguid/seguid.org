@@ -52,23 +52,47 @@ double-stranded sequences (e.g. DNA) and circular sequences
 
 
 ```sh
-$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
+$ echo -e "ATATGCC\nTATACGG" | python -m seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
+## Equivalent using Bash <<< syntax
+$ python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'  # <1>
+ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+
+$ echo -e "TATGCCA\nATACGGT" | python -m seguid --type=cdseguid
+cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+
+## Equivalent using Bash <<< syntax
+$ python -m seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'  # <1>
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
+
+1. The syntax `<<< $'ACGT\nTGCA'` is [Bash] syntax. The `<<<` part
+means pass the following string as input. The part `$'ACGT\nTGCA'` is
+how we can specify two string separated with a newline in Bash.
 
 
 ### CLI (R)
 
 ```sh
-$ Rscript -e seguid::seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'
+$ echo -e "ATATGCC\nTATACGG" | Rscript -e seguid::seguid --type=ldseguid
 ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 
-$ Rscript -e seguid::seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'
+## Equivalent using Bash <<< syntax
+$ Rscript -e seguid::seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'  # <1>
+ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+
+$ echo -e "TATGCCA\nATACGGT" | Rscript -e seguid::seguid --type=cdseguid
+cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+
+## Equivalent using Bash <<< syntax
+$ Rscript -e seguid::seguid --type=cdseguid <<< $'TATGCCA\nATACGGT'  # <1>
 cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
 ```
+
+1. The syntax `<<< $'ACGT\nTGCA'` is [Bash] syntax. The `<<<` part
+means pass the following string as input. The part `$'ACGT\nTGCA'` is
+how we can specify two string separated with a newline in Bash.
 
 :::
 
@@ -81,3 +105,7 @@ Python and R;
 
 * [**seguid**](https://github.com/seguid/seguid-python/) (Python package)
 * [**seguid**](https://seguid-r.seguid.org/) (R package)
+
+
+
+[Bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
