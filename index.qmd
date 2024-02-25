@@ -33,14 +33,16 @@ the checksum is identical.
 ```python
 >>> from seguid import *
 
->>> ldseguid("ATATGCC", "GGCATAT")
-'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
+>>> cdseguid("TATGCCAA", "TTGGCATA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
 
->>> ldseguid("GGCATAT", "ATATGCC")          ## Same swapping Watson and Crick 
-'ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
+## Same swapping Watson and Crick 
+>>> cdseguid("TTGGCATA", "TATGCCAA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
 
->>> cdseguid("TATGCCA", "TGGCATA")          ## Same rotatating one basepair
-'cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g'
+## Same rotatating two basepairs (= minimal rotation by Watson)
+>>> cdseguid("AATATGCC", "GGCATATT")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
 ```
 
 ### R
@@ -48,14 +50,16 @@ the checksum is identical.
 ```r
 > library(seguid)
 
-> ldseguid("ATATGCC", "GGCATAT")
-[1] "ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
+> cdseguid("TATGCCAA", "TTGGCATA")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 
->>> ldseguid("GGCATAT", "ATATGCC")          ## Same swapping Watson and Crick 
-[1] "ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
+## Same swapping Watson and Crick 
+> cdseguid("TTGGCATA", "TATGCCAA")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 
-> cdseguid("TATGCCA", "TGGCATA")            ## Same rotatating one basepair
-[1] "cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g"
+## Same rotatating two basepairs (= minimal rotation by Watson)
+> cdseguid("AATATGCC", "GGCATATT")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
 
 
@@ -63,42 +67,33 @@ the checksum is identical.
 
 
 ```sh
-$ echo -e 'ATATGCC\nTATACGG' | python -m seguid --type=ldseguid
-ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+$ python -m seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 
-$ ## Same swapping Watson and Crick
-$ echo -e 'TATACGG\nATATGCC' | python -m seguid --type=ldseguid
-ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+## Same swapping Watson and Crick
+$ python -m seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 
-$ ## Same rotatating one basepair
-$ echo -e 'TATGCCA\nATACGGT' | python -m seguid --type=cdseguid
-cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ python -m seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
-
-An alternative, to "piping" the input sequence to the SEGUID tool, is
-to use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
-i.e. `python -m seguid --type=ldseguid <<< $'ATATGCC\nTATACGG'`.
 
 
 ### CLI (R)
 
 ```sh
-$ echo -e 'ATATGCC\nTATACGG' | Rscript -e seguid::seguid --type=ldseguid
-ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 
-$ ## Same swapping Watson and Crick
-$ echo -e 'TATACGG\nATATGCC' | Rscript -e seguid::seguid --type=ldseguid
-ldseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+## Same swapping Watson and Crick
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 
-$ ## Same rotatating one basepair
-$ echo -e 'TATGCCA\nATACGGT' | Rscript -e seguid::seguid --type=cdseguid
-cdseguid=UnHLvKWgR_kAuUDz5D5zDYcYA7g
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
-
-An alternative, to "piping" the input sequence to the SEGUID tool, is
-to use [Bash] syntax `<<<` and `$'...\n...'` to escape the newline,
-i.e. `Rscript -e seguid::seguid --type=ldseguid <<<
-$'ATATGCC\nTATACGG'`.
 
 :::
 
