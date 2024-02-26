@@ -10,6 +10,8 @@ website:
         href: index.qmd
       - text: Available Software
         menu:
+          - text: "<strong>seguid</strong> (JavaScript package)"
+            url:  https://github.com/seguid/seguid-javascript/
           - text: "<strong>seguid</strong> (Python package)"
             url:  https://github.com/seguid/seguid-python/
           - text: "<strong>seguid</strong> (R package)"

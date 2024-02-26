@@ -63,6 +63,22 @@ the checksum is identical.
 ```
 
 
+### CLI (JavaScript)
+
+```sh
+$ npx seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ npx seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ npx seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
+
+
 ### CLI (Python)
 
 
@@ -102,11 +118,8 @@ cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ## Availability
 
 Implementations of above SEGUID methods are currently available for
-Python and R;
+JavaScript, Python, and R;
 
+* [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package)
 * [**seguid**](https://github.com/seguid/seguid-python/) (Python package)
 * [**seguid**](https://seguid-r.seguid.org/) (R package)
-
-
-
-[Bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
