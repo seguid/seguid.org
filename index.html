@@ -151,6 +151,10 @@ div.csl-indent {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-available-software">    
         <li>
+    <a class="dropdown-item" href="https://github.com/seguid/seguid-javascript/">
+ <span class="dropdown-text"><strong>seguid</strong> (JavaScript package)</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://github.com/seguid/seguid-python/">
  <span class="dropdown-text"><strong>seguid</strong> (Python package)</span></a>
   </li>  
@@ -242,7 +246,7 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="example-seguid-v2-for-circular-double-stranded-dna">Example: SEGUID v2 for circular double-stranded DNA</h2>
 <p>SEGUID v2 is designed to be invariant to (i) rotation and (ii) duality (see above figure). No matter where we chose to “start” the dsDNA sequence, and no matter which strand we chose to the Watson strand, the checksum is identical.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">CLI (Python)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">CLI (R)</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">CLI (JavaScript)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">CLI (Python)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">CLI (R)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> seguid <span class="im">import</span> <span class="op">*</span></span>
@@ -273,36 +277,49 @@ div.csl-indent {
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npx seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Same swapping Watson and Crick</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TTGGCATA;TATGCCAA'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npx seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TTGGCATA;TATGCCAA'</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Same rotating two basepairs (= minimal rotation by Watson)</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'AATATGCC;GGCATATT'</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npx seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'AATATGCC;GGCATATT'</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Same swapping Watson and Crick</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TTGGCATA;TATGCCAA'</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TTGGCATA;TATGCCAA'</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Same rotating two basepairs (= minimal rotation by Watson)</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'AATATGCC;GGCATATT'</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'AATATGCC;GGCATATT'</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Same swapping Watson and Crick</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TTGGCATA;TATGCCAA'</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Same rotating two basepairs (= minimal rotation by Watson)</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> Rscript <span class="at">-e</span> seguid::seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'AATATGCC;GGCATATT'</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="va">cdseguid</span><span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="availability" class="level2">
 <h2 class="anchored" data-anchor-id="availability">Availability</h2>
-<p>Implementations of above SEGUID methods are currently available for Python and R;</p>
+<p>Implementations of above SEGUID methods are currently available for JavaScript, Python, and R;</p>
 <ul>
+<li><a href="https://github.com/seguid/seguid-javascript/"><strong>seguid</strong></a> (JavaScript package)</li>
 <li><a href="https://github.com/seguid/seguid-python/"><strong>seguid</strong></a> (Python package)</li>
 <li><a href="https://seguid-r.seguid.org/"><strong>seguid</strong></a> (R package)</li>
 </ul>
