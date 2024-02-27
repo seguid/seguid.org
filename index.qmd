@@ -5,7 +5,7 @@ bibliography: references.bib
 
 :::{style="color:red"}
 _WARNING: This is work under construction! Please do **not** use this
-in production until we've offically released SEGUID v2._
+in production until we've officially released SEGUID v2._
 :::
 
 The SEquence Globally Unique IDentifier (SEGUID) checksum
@@ -40,7 +40,7 @@ strand, the produced checksums are identical.
 >>> cdseguid("TTGGCATA", "TATGCCAA")
 'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
 
-## Same rotatating two basepairs (= minimal rotation by Watson)
+## Same rotating two basepairs (= minimal rotation by Watson)
 >>> cdseguid("AATATGCC", "GGCATATT")
 'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
 ```
@@ -57,7 +57,7 @@ strand, the produced checksums are identical.
 > cdseguid("TTGGCATA", "TATGCCAA")
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 
-## Same rotatating two basepairs (= minimal rotation by Watson)
+## Same rotating two basepairs (= minimal rotation by Watson)
 > cdseguid("AATATGCC", "GGCATATT")
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
