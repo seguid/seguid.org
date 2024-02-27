@@ -12,3 +12,7 @@ preview: assert_quarto
 
 render: assert_quarto
 	quarto render
+
+spelling: WORDLIST
+	Rscript -e "spelling::spell_check_files(path = dir(pattern = '[.]qmd$$'), ignore = readLines('$<'))"
+
