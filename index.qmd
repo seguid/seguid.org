@@ -22,8 +22,8 @@ double-stranded sequences (e.g. DNA) and circular sequences
 ## Example: SEGUID v2 for circular double-stranded DNA
 
 SEGUID v2 is designed to be invariant to (i) rotation and (ii) duality
-(see above figure). No matter where we chose to "start" the dsDNA
-sequence, and no matter which strand we chose to the Watson strand,
+(see above figure). No matter where we choose to "start" the dsDNA
+sequence, and no matter which strand we choose to the Watson strand,
 the checksum is identical.
 
 ::: {.panel-tabset}
