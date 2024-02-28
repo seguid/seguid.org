@@ -4,3 +4,5 @@ bibliography: references.bib
 ---
 
 Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. <https://doi.org/10.1002/pmic.200600032>.
+
+Pereira, Humberto, Paulo César Silva, M. Wayne Davis, Louis Abraham, György Babnigg, Henrik Bengtsson, and Björn Johansson. 2024. “SEGUID V2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.” (To be submitted).
