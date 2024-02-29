@@ -121,5 +121,5 @@ Implementations of above SEGUID methods are currently available for
 JavaScript, Python, and R;
 
 * [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package)
-* [**seguid**](https://github.com/seguid/seguid-python/) (Python package)
+* [**seguid**](https://seguid-python.seguid.org/) (Python package)
 * [**seguid**](https://seguid-r.seguid.org/) (R package)

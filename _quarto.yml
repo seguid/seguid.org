@@ -13,7 +13,7 @@ website:
           - text: "<strong>seguid</strong> (JavaScript package)"
             url:  https://github.com/seguid/seguid-javascript/
           - text: "<strong>seguid</strong> (Python package)"
-            url:  https://github.com/seguid/seguid-python/
+            url:  https://seguid-python.seguid.org
           - text: "<strong>seguid</strong> (R package)"
             url:  https://seguid-r.seguid.org
       - text: Live Demo
