@@ -122,4 +122,4 @@ JavaScript, Python, and R;
 
 * [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package)
 * [**seguid**](https://seguid-python.seguid.org/) (Python package)
-* [**seguid**](https://seguid-r.seguid.org/) (R package)
+* [**seguid**](https://seguid-r.seguid.org/) (R package on [CRAN](https://cran.r-project.org/package=seguid))
