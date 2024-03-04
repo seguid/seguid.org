@@ -39,7 +39,7 @@
     "href": "index.html#availability",
     "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Availability",
-    "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, and R;\n\nseguid (JavaScript package)\nseguid (Python package)\nseguid (R package)"
+    "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, and R;\n\nseguid (JavaScript package)\nseguid (Python package)\nseguid (R package on CRAN)"
   },
   {
     "objectID": "about.html",
