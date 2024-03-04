@@ -49,10 +49,15 @@
 }
 
 
-@misc{Pereira_etal_2024,
+@article{Pereira_etal_2024,
   title        = "{SEGUID v2}: Extending {SEGUID} checksums for circular, linear, single- and double-stranded biological sequences",
-  author       = "Pereira, Humberto and Silva, Paulo César and Davis, M. Wayne and Abraham, Louis and Babnigg, György and Bengtsson, Henrik and Johansson, Björn",
+  author       = "Humberto Pereira and Paulo C{\'e}sar Silva and Wayne M Davis and Louis Abraham and Gyorgy Babnigg and Henrik Bengtsson and Bjorn Johansson",
+  elocation-id = {2024.02.28.582384},
   year         = "2024",
-  howpublished = "To be submitted",
-  note         = "To be submitted"
+  doi          = "10.1101/2024.02.28.582384",
+  publisher    = "Cold Spring Harbor Laboratory",
+  journal      = "bioRxiv",
+  url          = "https://www.biorxiv.org/content/early/2024/03/03/2024.02.28.582384",
+  eprint       = "https://www.biorxiv.org/content/early/2024/03/03/2024.02.28.582384.full.pdf",
+  abstract     = "Background: Synthetic biology involves combining different DNA fragments, each containing functional biological parts, to address specific problems. Fundamental gene-function research often requires cloning and propagating DNA fragments, such as those from the iGEM Parts Registry or Addgene, typically distributed as circular plasmids. Addgene{\textquoteright}s repository alone offers over 100,000 plasmids. To ensure data integrity, cryptographic checksums can be calculated for the sequences. Each sequence has a unique checksum, making checksums useful for validation and quick lookups of associated annotations. For example, the SEGUID checksum, uniquely identifies protein sequences with a 27-character string. Objectives: The original SEGUID, while effective for protein sequences and single-stranded DNA (ssDNA), is not suitable for circular and double-stranded DNA (dsDNA) due to topological differences. Challenges include how to uniquely represent linear dsDNA, circular ssDNA, and circular dsDNA. To meet these needs, we propose SEGUID v2, which extends the original SEGUID to handle additional types of sequences. Conclusions: SEGUID v2 produces strand and rotation invariant checksums for single-stranded, double-stranded, possibly staggered, linear, and circular DNA and RNA sequences. Customizable alphabets allows for other types of sequences. In contrast to the original SEGUID, which uses Base64, SEGUID v2 uses Base64url to encode the SHA-1 hash. This ensures SEGUID v2 checksums can be used as-is in filenames, regardless of platform, and in URLs, with minimal friction. Availability: SEGUID v2 is readily available for major programming languages distributed under the MIT license. JavaScript package {\textquoteright}seguid{\textquoteright} is available on NPM, Python package {\textquoteright}seguid{\textquoteright} on PyPi, and R package {\textquoteright}seguid{\textquoteright} on CRAN.Competing Interest StatementThe authors have declared no competing interest."
 }
