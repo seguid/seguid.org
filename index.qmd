@@ -3,9 +3,9 @@ title: "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded B
 bibliography: references.bib
 ---
 
-:::{style="color:red"}
-_WARNING: This is work under construction! Please do **not** use this
-in production until we've officially released SEGUID v2._
+::: {.callout-warning}
+This is work under construction! Please do **not** use this in
+production until we've officially released SEGUID v2.
 :::
 
 The SEquence Globally Unique IDentifier (SEGUID) checksum
