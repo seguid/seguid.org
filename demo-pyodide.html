@@ -227,7 +227,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"output":"true","comment":"","fig-height":5,"fig-width":7,"read-only":"false","warning":"true","out-width":"700px","label":"","context":"interactive","out-height":"","fig-cap":"","autorun":"","classes":"","dpi":72,"results":"markup","message":"true"},"code":"1+2"}];
+globalThis.qpyodideCellDetails = [{"code":"import micropip\nawait micropip.install(\"seguid\")\nfrom seguid import *","id":1,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"true","out-height":"","dpi":72,"autorun":"true"}},{"code":"lsseguid(\"GATTACA\")","id":2,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":3,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":4,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"csseguid(\"GATTACA\")","id":5,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":6,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":7,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")","id":8,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}}];
 
 
 </script>
@@ -480,7 +480,16 @@ globalThis._qpyodideGetInstance = function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link active" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#linear-single-stranded-dna" id="toc-linear-single-stranded-dna" class="nav-link" data-scroll-target="#linear-single-stranded-dna">Linear, single-stranded DNA</a></li>
+  <li><a href="#linear-double-stranded-dna" id="toc-linear-double-stranded-dna" class="nav-link" data-scroll-target="#linear-double-stranded-dna">Linear, double-stranded DNA</a></li>
+  <li><a href="#staggered-linear-double-stranded-dna" id="toc-staggered-linear-double-stranded-dna" class="nav-link" data-scroll-target="#staggered-linear-double-stranded-dna">Staggered linear, double-stranded DNA</a></li>
+  <li><a href="#circular-single-stranded-dna" id="toc-circular-single-stranded-dna" class="nav-link" data-scroll-target="#circular-single-stranded-dna">Circular, single-stranded DNA</a></li>
+  <li><a href="#circular-double-stranded-dna" id="toc-circular-double-stranded-dna" class="nav-link" data-scroll-target="#circular-double-stranded-dna">Circular, double-stranded DNA</a></li>
+  <li><a href="#protein" id="toc-protein" class="nav-link" data-scroll-target="#protein">Protein</a></li>
+  <li><a href="#expanded-epigenetic-double-stranded-dna" id="toc-expanded-epigenetic-double-stranded-dna" class="nav-link" data-scroll-target="#expanded-epigenetic-double-stranded-dna">Expanded epigenetic double-stranded DNA</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/seguid/seguid.org/blob/main/demo-pyodide.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/seguid/seguid.org/edit/main/demo-pyodide.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/seguid/seguid.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -516,17 +525,63 @@ globalThis._qpyodideGetInstance = function() {
 </header>
 
 
-<div style="color:red">
-<p><em>WARNING: We need to figure out how to install <strong>seguid</strong> here. This is based on the Quarto extension <a href="https://quarto.thecoatlessprofessor.com/pyodide/" class="uri">https://quarto.thecoatlessprofessor.com/pyodide/</a>.</em></p>
-</div>
 <p>This is an online demo of the Python package <strong><a href="https://seguid-python.seguid.org/">seguid</a></strong> and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on <a href="https://pyodide.org/en/stable/">Pyodide</a> and <a href="https://webassembly.org/">WebAssembly</a>.</p>
 <p>To run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See <strong><a href="https://seguid-python.seguid.org/">seguid</a></strong> for the details on these functions, including what type of arguments they take.</p>
+<p>Requirement: Run the following code-snippet once:</p>
+<div id="qpyodide-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>WARNING: In order for the code snippets to work, you must click ‘Run Code’ on the above code snippet once.</em></p>
+</div>
+</div>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<div id="qpyodide-insertion-location-1"></div>
+<section id="linear-single-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="linear-single-stranded-dna">Linear, single-stranded DNA</h3>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="linear-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="linear-double-stranded-dna">Linear, double-stranded DNA</h3>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="staggered-linear-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="staggered-linear-double-stranded-dna">Staggered linear, double-stranded DNA</h3>
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="circular-single-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="circular-single-stranded-dna">Circular, single-stranded DNA</h3>
+<div id="qpyodide-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="circular-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="circular-double-stranded-dna">Circular, double-stranded DNA</h3>
+<div id="qpyodide-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="protein" class="level3">
+<h3 class="anchored" data-anchor-id="protein">Protein</h3>
+<div id="qpyodide-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="expanded-epigenetic-double-stranded-dna" class="level3">
+<h3 class="anchored" data-anchor-id="expanded-epigenetic-double-stranded-dna">Expanded epigenetic double-stranded DNA</h3>
+<div id="qpyodide-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

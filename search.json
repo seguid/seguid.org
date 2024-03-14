@@ -1,24 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "",
-    "text": "About this site"
+    "text": "Warning\n\n\n\nThis is work under construction! Please do not use this in production until we’ve officially released SEGUID v2.\nThe SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (Pereira et al. 2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
   },
   {
-    "objectID": "demo-pyodide.html",
-    "href": "demo-pyodide.html",
-    "title": "Demo: Python package seguid",
-    "section": "",
-    "text": "WARNING: We need to figure out how to install seguid here. This is based on the Quarto extension https://quarto.thecoatlessprofessor.com/pyodide/.\nThis is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take."
+    "objectID": "index.html#example-seguid-v2-for-circular-double-stranded-dna",
+    "href": "index.html#example-seguid-v2-for-circular-double-stranded-dna",
+    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
+    "section": "Example: SEGUID v2 for circular double-stranded DNA",
+    "text": "Example: SEGUID v2 for circular double-stranded DNA\nSEGUID v2 is designed to be invariant to (i) rotation and (ii) duality (see above figure). No matter where we choose to “start” the circular dsDNA sequence, and no matter which strand we choose to be the Watson strand, the produced checksums are identical.\n\nPythonRCLI (JavaScript)CLI (Python)CLI (R)\n\n\n&gt;&gt;&gt; from seguid import *\n\n&gt;&gt;&gt; cdseguid(\"TATGCCAA\", \"TTGGCATA\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n## Same swapping Watson and Crick \n&gt;&gt;&gt; cdseguid(\"TTGGCATA\", \"TATGCCAA\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n&gt;&gt;&gt; cdseguid(\"AATATGCC\", \"GGCATATT\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n\n&gt; library(seguid)\n\n&gt; cdseguid(\"TATGCCAA\", \"TTGGCATA\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n## Same swapping Watson and Crick \n&gt; cdseguid(\"TTGGCATA\", \"TATGCCAA\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n&gt; cdseguid(\"AATATGCC\", \"GGCATATT\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
   },
   {
-    "objectID": "demo-pyodide.html#examples",
-    "href": "demo-pyodide.html#examples",
-    "title": "Demo: Python package seguid",
-    "section": "Examples",
-    "text": "Examples\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "index.html#availability",
+    "href": "index.html#availability",
+    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
+    "section": "Availability",
+    "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, and R;\n\nseguid (JavaScript package)\nseguid (Python package)\nseguid (R package on CRAN)"
+  },
+  {
+    "objectID": "quality.html",
+    "href": "quality.html",
+    "title": "Quality",
+    "section": "",
+    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
   },
   {
     "objectID": "publications.html",
@@ -42,31 +49,24 @@
     "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "quality.html",
-    "href": "quality.html",
-    "title": "Quality",
+    "objectID": "demo-pyodide.html",
+    "href": "demo-pyodide.html",
+    "title": "Demo: Python package seguid",
     "section": "",
-    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
+    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Run the following code-snippet once:"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
+    "objectID": "demo-pyodide.html#examples",
+    "href": "demo-pyodide.html#examples",
+    "title": "Demo: Python package seguid",
+    "section": "Examples",
+    "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Warning\n\n\n\nThis is work under construction! Please do not use this in production until we’ve officially released SEGUID v2.\nThe SEquence Globally Unique IDentifier (SEGUID) checksum (Babnigg and Giometti 2006) was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 (Pereira et al. 2024) extends the original SEGUID method to support also double-stranded sequences (e.g. DNA) and circular sequences (e.g. proteins and double-stranded DNA)."
-  },
-  {
-    "objectID": "index.html#example-seguid-v2-for-circular-double-stranded-dna",
-    "href": "index.html#example-seguid-v2-for-circular-double-stranded-dna",
-    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
-    "section": "Example: SEGUID v2 for circular double-stranded DNA",
-    "text": "Example: SEGUID v2 for circular double-stranded DNA\nSEGUID v2 is designed to be invariant to (i) rotation and (ii) duality (see above figure). No matter where we choose to “start” the circular dsDNA sequence, and no matter which strand we choose to be the Watson strand, the produced checksums are identical.\n\nPythonRCLI (JavaScript)CLI (Python)CLI (R)\n\n\n&gt;&gt;&gt; from seguid import *\n\n&gt;&gt;&gt; cdseguid(\"TATGCCAA\", \"TTGGCATA\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n## Same swapping Watson and Crick \n&gt;&gt;&gt; cdseguid(\"TTGGCATA\", \"TATGCCAA\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n&gt;&gt;&gt; cdseguid(\"AATATGCC\", \"GGCATATT\")\n'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'\n\n\n&gt; library(seguid)\n\n&gt; cdseguid(\"TATGCCAA\", \"TTGGCATA\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n## Same swapping Watson and Crick \n&gt; cdseguid(\"TTGGCATA\", \"TATGCCAA\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n&gt; cdseguid(\"AATATGCC\", \"GGCATATT\")\n[1] \"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\"\n\n\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ npx seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ python -m seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'TATGCCAA;TTGGCATA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same swapping Watson and Crick\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'TTGGCATA;TATGCCAA'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A\n\n## Same rotating two basepairs (= minimal rotation by Watson)\n$ Rscript -e seguid::seguid --type=cdseguid &lt;&lt;&lt; 'AATATGCC;GGCATATT'\ncdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
-  },
-  {
-    "objectID": "index.html#availability",
-    "href": "index.html#availability",
-    "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
-    "section": "Availability",
-    "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, and R;\n\nseguid (JavaScript package)\nseguid (Python package)\nseguid (R package on CRAN)"
+    "text": "About this site"
   }
 ]
