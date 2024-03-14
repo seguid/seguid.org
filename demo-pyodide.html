@@ -208,13 +208,13 @@ ul.task-list li input[type="checkbox"] {
 // Document level settings ----
 
 // Determine if we need to install python packages
-globalThis.qpyodideInstallPythonPackagesList = [''];
+globalThis.qpyodideInstallPythonPackagesList = ['seguid'];
 
 // Check to see if we have an empty array, if we do set to skip the installation.
 globalThis.qpyodideSetupPythonPackages = !(qpyodideInstallPythonPackagesList.indexOf("") !== -1);
 
 // Display a startup message?
-globalThis.qpyodideShowStartupMessage = true;
+globalThis.qpyodideShowStartupMessage = false;
 
 // Describe the webR settings that should be used
 globalThis.qpyodideCustomizedPyodideOptions = {
@@ -227,7 +227,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"import micropip\nawait micropip.install(\"seguid\")\nfrom seguid import *","id":1,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"true","out-height":"","dpi":72,"autorun":"true"}},{"code":"lsseguid(\"GATTACA\")","id":2,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":3,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":4,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"csseguid(\"GATTACA\")","id":5,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":6,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":7,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}},{"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")","id":8,"options":{"out-width":"700px","message":"true","fig-width":7,"warning":"true","fig-height":5,"results":"markup","label":"","comment":"","fig-cap":"","classes":"","context":"interactive","output":"true","read-only":"false","out-height":"","dpi":72,"autorun":""}}];
+globalThis.qpyodideCellDetails = [{"id":1,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"true","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"true","classes":"","comment":""},"code":"await micropip.install(\"seguid\")\nfrom seguid import *"},{"id":2,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"lsseguid(\"GATTACA\")"},{"id":3,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"ldseguid(\"GATTACA\", \"TGTAATC\")"},{"id":4,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"ldseguid(\"-ATTACA\", \"--TAATC\")"},{"id":5,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"csseguid(\"GATTACA\")"},{"id":6,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"cdseguid(\"GATTACA\", \"TGTAATC\")"},{"id":7,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")"},{"id":8,"options":{"out-height":"","output":"true","label":"","context":"interactive","message":"true","warning":"true","results":"markup","dpi":72,"fig-height":5,"read-only":"false","fig-width":7,"fig-cap":"","out-width":"700px","autorun":"","classes":"","comment":""},"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")"}];
 
 
 </script>
@@ -252,10 +252,21 @@ globalThis.qpyodideUpdateStatusMessage = function(message) {
 
 // Function to update the status message
 globalThis.qpyodideUpdateStatusHeader = function(message) {
-  qpyodideStartupMessage.innerHTML = `
-    <i class="fa-solid fa-spinner fa-spin qpyodide-icon-status-spinner"></i>
-    <span>${message}</span>`;
+
+  if (!qpyodideShowStartupMessage) return;
+
+  qpyodideStartupMessage.innerHTML = message;
 }
+
+// Status header update with customized spinner message
+globalThis.qpyodideUpdateStatusHeaderSpinner = function(message) {
+
+  qpyodideUpdateStatusHeader(`
+    <i class="fa-solid fa-spinner fa-spin qpyodide-icon-status-spinner"></i>
+    <span>${message}</span>
+  `);
+}
+
 
 // Function that attaches the document status message
 function qpyodideDisplayStartupMessage(showStartupMessage) {
@@ -351,8 +362,24 @@ globalThis.qpyodideInstance = await import(
     
     // Setup a namespace for global scoping
     // await loadedPyodide.runPythonAsync("globalScope = {}"); 
+    
+    // Update status to reflect the next stage of the procedure
+    qpyodideUpdateStatusHeaderSpinner("Initializing Python Packages");
 
-    // Add matplotlib
+    // Load the `micropip` package to allow installation of packages.
+    await mainPyodide.loadPackage("micropip");
+    await mainPyodide.runPythonAsync(`import micropip`);
+
+    // Load the `pyodide_http` package to shim uses of `requests` and `urllib3`.
+    // This allows for `pd.read_csv(url)` to work flawlessly.
+    // Details: https://github.com/coatless-quarto/pyodide/issues/9
+    await mainPyodide.loadPackage("pyodide_http");
+    await mainPyodide.runPythonAsync(`
+    import pyodide_http
+    pyodide_http.patch_all()  # Patch all libraries
+    `);
+
+    // Load the `matplotlib` package with necessary environment hook
     await mainPyodide.loadPackage("matplotlib");
 
     // Set the backend for matplotlib to be interactive.
@@ -366,11 +393,12 @@ globalThis.qpyodideInstance = await import(
     qpyodideSetInteractiveButtonState(
       `<i class="fa-solid fa-play qpyodide-icon-run-code"></i> <span>Run Code</span>`, 
       true
-    ); 
+    );
 
-    if (qpyodideShowStartupMessage) {
-      qpyodideStartupMessage.innerText = "🟢 Ready!"
-    }
+    // Set document status to viable
+    qpyodideUpdateStatusHeader(
+      "🟢 Ready!"
+    );
 
     // Assign Pyodide into the global environment
     globalThis.mainPyodide = mainPyodide;
@@ -439,6 +467,10 @@ globalThis._qpyodideGetInstance = function() {
  <span class="menu-text">Live Demo</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-live-demo">    
+        <li>
+    <a class="dropdown-item" href="./demo-pyodide.html">
+ <span class="dropdown-text">Demo: Python package <strong>seguid</strong></span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="./demo-webr.html">
  <span class="dropdown-text">Demo: R package <strong>seguid</strong></span></a>

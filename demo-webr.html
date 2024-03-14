@@ -231,7 +231,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"lsseguid(\"GATTACA\")","id":1,"options":{"label":"unnamed-chunk-1","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":2,"options":{"label":"unnamed-chunk-2","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":3,"options":{"label":"unnamed-chunk-3","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"csseguid(\"GATTACA\")","id":4,"options":{"label":"unnamed-chunk-4","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":5,"options":{"label":"unnamed-chunk-5","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":6,"options":{"label":"unnamed-chunk-6","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}},{"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")","id":7,"options":{"label":"unnamed-chunk-7","output":"true","dpi":72,"comment":"","out-width":"700px","warning":"true","autorun":"false","out-height":"","classes":"","context":"interactive","message":"true","fig-width":7,"results":"markup","fig-height":5,"fig-cap":""}}];
+globalThis.qwebrCellDetails = [{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-1","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":1,"code":"lsseguid(\"GATTACA\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-2","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":2,"code":"ldseguid(\"GATTACA\", \"TGTAATC\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-3","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":3,"code":"ldseguid(\"-ATTACA\", \"--TAATC\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-4","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":4,"code":"csseguid(\"GATTACA\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-5","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":5,"code":"cdseguid(\"GATTACA\", \"TGTAATC\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-6","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":6,"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")"},{"options":{"warning":"true","context":"interactive","read-only":"false","label":"unnamed-chunk-7","out-height":"","classes":"","message":"true","autorun":"false","output":"true","dpi":72,"comment":"","fig-width":7,"fig-cap":"","fig-height":5,"results":"markup","out-width":"700px"},"id":7,"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")"}];
 
 </script>
 <script type="module">
@@ -998,6 +998,10 @@ globalThis.qwebrExecuteCode = async function (
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-live-demo">    
         <li>
+    <a class="dropdown-item" href="./demo-pyodide.html">
+ <span class="dropdown-text">Demo: Python package <strong>seguid</strong></span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./demo-webr.html">
  <span class="dropdown-text">Demo: R package <strong>seguid</strong></span></a>
   </li>  
@@ -1094,7 +1098,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
       },
       fontSize: '17.5pt',              // Bootstrap is 1 rem
       renderLineHighlight: "none",     // Disable current line highlighting
-      hideCursorInOverviewRuler: true  // Remove cursor indictor in right hand side scroll bar
+      hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
+      readOnly: qwebrOptions['read-only'] ?? false
     });
 
     // Store the official counter ID to be used in keyboard shortcuts
