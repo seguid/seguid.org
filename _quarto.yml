@@ -18,6 +18,8 @@ website:
             url:  https://seguid-r.seguid.org
       - text: Live Demo
         menu:
+          - text: "Demo: Python package <strong>seguid</strong>"
+            href: demo-pyodide.html
           - text: "Demo: R package <strong>seguid</strong>"
             href: demo-webr.html
       - quality.qmd

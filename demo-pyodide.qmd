@@ -3,8 +3,9 @@ title: "Demo: Python package seguid"
 format: html
 filters:
   - pyodide
-webr:
+pyodide:
   show-startup-message: false
+  packages: ["seguid"]
   autoload-packages: true
 ---
 
@@ -23,7 +24,6 @@ Requirement: Run the following code-snippet once:
 ```{pyodide-python}
 #| read-only: true
 #| autorun: true
-import micropip
 await micropip.install("seguid")
 from seguid import *
 ```
