@@ -9,9 +9,10 @@ pyodide:
   autoload-packages: true
 ---
 
-This is an online demo of the Python package **[seguid]** and the SEGUID v2
-algorithm.  The below examples run an Python instance completely within
-your web browser based on [Pyodide] and [WebAssembly].
+This is an online demo of the Python package **[seguid]** and the
+SEGUID v2 algorithm.  The below examples run an Python instance
+completely within your web browser based on [Pyodide] and
+[WebAssembly] via [coatless/pyodide].
 
 To run the examples, click 'Run Code'. Feel free to edit any of them
 as you prefer. Nothing you type or enter below leaves your web
@@ -85,3 +86,4 @@ ldseguid("TTGmGCAA", "TTGC1CAA", alphabet = "{DNA},m1,h2,f3,c4")
 [seguid]: https://seguid-python.seguid.org/
 [Pyodide]: https://pyodide.org/en/stable/
 [WebAssembly]: https://webassembly.org/
+[coatless/pyodide]: https://github.com/coatless-quarto/pyodide

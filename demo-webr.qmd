@@ -13,7 +13,8 @@ webr:
 
 This is an online demo of the R package **[seguid]** and the SEGUID v2
 algorithm.  The below examples run an R instance completely within
-your web browser based on [webR] and [WebAssembly].
+your web browser based on [webR] and [WebAssembly] via
+[coatless/quarto-webr].
 
 To run the examples, click 'Run Code'. Feel free to edit any of them
 as you prefer. Nothing you type or enter below leaves your web
@@ -71,4 +72,4 @@ ldseguid("TTGmGCAA", "TTGC1CAA", alphabet = "{DNA},m1,h2,f3,c4")
 [seguid]: https://seguid-r.seguid.org/
 [webR]: https://docs.r-wasm.org/webr/latest/
 [WebAssembly]: https://webassembly.org/
-
+[coatless/quarto-webr]: https://github.com/coatless/quarto-webr
