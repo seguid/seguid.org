@@ -39,7 +39,7 @@
     "href": "demo-webr.html",
     "title": "Demo: R package seguid",
     "section": "",
-    "text": "This is an online demo of the R package seguid and the SEGUID v2 algorithm. The below examples run an R instance completely within your web browser based on webR and WebAssembly.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take."
+    "text": "This is an online demo of the R package seguid and the SEGUID v2 algorithm. The below examples run an R instance completely within your web browser based on webR and WebAssembly via coatless/quarto-webr.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take."
   },
   {
     "objectID": "demo-webr.html#examples",
@@ -53,7 +53,7 @@
     "href": "demo-pyodide.html",
     "title": "Demo: Python package seguid",
     "section": "",
-    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Run the following code-snippet once:"
+    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly via coatless/pyodide.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Run the following code-snippet once:"
   },
   {
     "objectID": "demo-pyodide.html#examples",
