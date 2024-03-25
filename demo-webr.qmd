@@ -6,7 +6,7 @@ filters:
   - webr
 webr:
   show-startup-message: false
-  repos: ["https://seguid.r-universe.dev", "https://repo.r-wasm.org"]
+  repos: ["https://cran.r-universe.dev", "https://repo.r-wasm.org"]
   packages: ["seguid"]
   autoload-packages: true
 ---
