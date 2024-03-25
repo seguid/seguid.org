@@ -7,6 +7,10 @@ install_quarto_extensions:
 	quarto add coatless/quarto-webr
 	quarto add coatless-quarto/pyodide
 
+update_quarto_extensions:
+	quarto update coatless/quarto-webr
+	quarto update coatless-quarto/pyodide
+
 preview: assert_quarto
 	quarto preview
 
