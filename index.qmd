@@ -111,6 +111,21 @@ $ Rscript -e seguid::seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
 cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
 
+### CLI (Tcl)
+
+```sh
+$ tclsh seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ tclsh seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ tclsh seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
+
 :::
 
 
@@ -118,8 +133,9 @@ cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ## Availability
 
 Implementations of above SEGUID methods are currently available for
-JavaScript, Python, and R;
+JavaScript, Python, R, and Tcl;
 
 * [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package)
 * [**seguid**](https://seguid-python.seguid.org/) (Python package)
 * [**seguid**](https://seguid-r.seguid.org/) (R package on [CRAN](https://cran.r-project.org/package=seguid))
+* [**seguid**](https://github.com/seguid/seguid-tcl/) (Tcl script)
