@@ -17,7 +17,7 @@ website:
           - text: "<strong>seguid</strong> (R package)"
             url:  https://seguid-r.seguid.org
           - text: "<strong>seguid</strong> (Tcl script)"
-            url:  https://seguid-tcl.seguid.org
+            url:  https://github.com/seguid/seguid-tcl/
       - text: Live Demo
         menu:
           - text: "Demo: Python package <strong>seguid</strong>"
