@@ -20,7 +20,9 @@ browser.  See **[seguid]** for the details on these functions,
 including what type of arguments they take.
 
 
-Requirement: Run the following code-snippet once:
+Requirement: Until
+[coatless/pyodide#5](https://github.com/coatless-quarto/pyodide/issues/5)
+has been implemented, you must run the following code-snippet once:
 
 ```{pyodide-python}
 #| read-only: true
