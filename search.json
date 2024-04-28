@@ -60,7 +60,7 @@
     "href": "demo-pyodide.html",
     "title": "Demo: Python package seguid",
     "section": "",
-    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly via coatless/pyodide.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Run the following code-snippet once:"
+    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly via coatless/pyodide.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Until coatless/pyodide#5 has been implemented, you must run the following code-snippet once:"
   },
   {
     "objectID": "demo-pyodide.html#examples",
