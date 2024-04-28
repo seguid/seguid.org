@@ -21,18 +21,11 @@
     "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, R, and Tcl;\n\nseguid (JavaScript package)\nseguid (Python package)\nseguid (R package on CRAN)\nseguid (Tcl script)"
   },
   {
-    "objectID": "quality.html",
-    "href": "quality.html",
-    "title": "Quality",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. https://doi.org/10.1002/pmic.200600032.\nPereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson. 2024. “SEGUID v2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.” bioRxiv. https://doi.org/10.1101/2024.02.28.582384."
+    "text": "About this site"
   },
   {
     "objectID": "demo-webr.html",
@@ -49,6 +42,20 @@
     "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. https://doi.org/10.1002/pmic.200600032.\nPereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson. 2024. “SEGUID v2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.” bioRxiv. https://doi.org/10.1101/2024.02.28.582384."
+  },
+  {
+    "objectID": "quality.html",
+    "href": "quality.html",
+    "title": "Quality",
+    "section": "",
+    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
+  },
+  {
     "objectID": "demo-pyodide.html",
     "href": "demo-pyodide.html",
     "title": "Demo: Python package seguid",
@@ -61,12 +68,5 @@
     "title": "Demo: Python package seguid",
     "section": "Examples",
     "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]
