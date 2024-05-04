@@ -21,9 +21,9 @@ website:
       - text: Live Demo
         menu:
           - text: "Demo: Python package <strong>seguid</strong>"
-            href: demo-pyodide.html
+            href: demo-python.html
           - text: "Demo: R package <strong>seguid</strong>"
-            href: demo-webr.html
+            href: demo-r.html
       - quality.qmd
       - publications.qmd
       - about.qmd
@@ -48,5 +48,3 @@ format:
 execute:
   freeze: auto
   
-
-
