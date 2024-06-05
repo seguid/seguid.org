@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "demo-python.html",
-    "href": "demo-python.html",
-    "title": "Demo: Python package seguid",
-    "section": "",
-    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly via coatless/pyodide.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Until coatless/pyodide#5 has been implemented, you must run the following code-snippet once:"
-  },
-  {
-    "objectID": "demo-python.html#examples",
-    "href": "demo-python.html#examples",
-    "title": "Demo: Python package seguid",
-    "section": "Examples",
-    "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "demo-r.html",
-    "href": "demo-r.html",
-    "title": "Demo: R package seguid",
-    "section": "",
-    "text": "This is an online demo of the R package seguid and the SEGUID v2 algorithm. The below examples run an R instance completely within your web browser based on webR and WebAssembly via coatless/quarto-webr.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take."
-  },
-  {
-    "objectID": "demo-r.html#examples",
-    "href": "demo-r.html#examples",
-    "title": "Demo: R package seguid",
-    "section": "Examples",
-    "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "quality.html",
-    "href": "quality.html",
-    "title": "Quality",
-    "section": "",
-    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
-  },
-  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -42,11 +7,11 @@
     "text": "Babnigg, György, and Carol S Giometti. 2006. “A database of unique protein sequence identifiers for proteome studies.” Proteomics 6 (16): 4514–22. https://doi.org/10.1002/pmic.200600032.\nPereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson. 2024. “SEGUID v2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.” bioRxiv. https://doi.org/10.1101/2024.02.28.582384."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "web.html",
+    "href": "web.html",
+    "title": "seguid calculator",
     "section": "",
-    "text": "About this site"
+    "text": "SEGUID CALCULATOR\n\n\n\n\n    \n        \n            \n                Biological sequences in raw format only. All except GATCRYWSMKHBVDN will be\n                ignored. Complement and reverse complement will be calculated based on the {DNA} alphabet.\n            \n        \n\n        \n            \n                linear single-strand\n            \n            \n\n            \n        \n        \n            \n                circular single-strand\n            \n            \n            \n        \n        \n            \n                linear double-strand\n            \n            \n            \n        \n        \n            \n                circular double-strand\n            \n            \n            \n        \n        \n            \n                Length\n            \n            \n            \n        \n        \n            \n                Characters\n            \n            \n            \n        \n        \n            \n            \n                \n                    Reverse\n                \n                \n                    Complement\n                \n                \n                    Reverse Complement\n                \n                \n                    Clear"
   },
   {
     "objectID": "index.html",
@@ -68,5 +33,47 @@
     "title": "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences",
     "section": "Availability",
     "text": "Availability\nImplementations of above SEGUID methods are currently available for JavaScript, Python, R, and Tcl;\n\nseguid (JavaScript package)\nseguid (Python package on PyPI)\nseguid (R package on CRAN)\nseguid (Tcl script)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "quality.html",
+    "href": "quality.html",
+    "title": "Quality",
+    "section": "",
+    "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
+  },
+  {
+    "objectID": "demo-r.html",
+    "href": "demo-r.html",
+    "title": "Demo: R package seguid",
+    "section": "",
+    "text": "This is an online demo of the R package seguid and the SEGUID v2 algorithm. The below examples run an R instance completely within your web browser based on webR and WebAssembly via coatless/quarto-webr.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take."
+  },
+  {
+    "objectID": "demo-r.html#examples",
+    "href": "demo-r.html#examples",
+    "title": "Demo: R package seguid",
+    "section": "Examples",
+    "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "demo-python.html",
+    "href": "demo-python.html",
+    "title": "Demo: Python package seguid",
+    "section": "",
+    "text": "This is an online demo of the Python package seguid and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on Pyodide and WebAssembly via coatless/pyodide.\nTo run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See seguid for the details on these functions, including what type of arguments they take.\nRequirement: Until coatless/pyodide#5 has been implemented, you must run the following code-snippet once:"
+  },
+  {
+    "objectID": "demo-python.html#examples",
+    "href": "demo-python.html#examples",
+    "title": "Demo: Python package seguid",
+    "section": "Examples",
+    "text": "Examples\n\nLinear, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLinear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nStaggered linear, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, single-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCircular, double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nProtein\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExpanded epigenetic double-stranded DNA\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

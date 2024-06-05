@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.seguid.org/demo-python.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.seguid.org/demo-r.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.seguid.org/quality.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.seguid.org/publications.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
   </url>
   <url>
-    <loc>https://www.seguid.org/about.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
+    <loc>https://www.seguid.org/web.html</loc>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
   </url>
   <url>
     <loc>https://www.seguid.org/index.html</loc>
-    <lastmod>2024-05-04T23:01:23.913Z</lastmod>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/about.html</loc>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/quality.html</loc>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/demo-r.html</loc>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.seguid.org/demo-python.html</loc>
+    <lastmod>2024-06-05T10:33:40.986Z</lastmod>
   </url>
 </urlset>
