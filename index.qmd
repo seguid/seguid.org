@@ -135,7 +135,7 @@ cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 Implementations of above SEGUID methods are currently available for
 JavaScript, Python, R, and Tcl;
 
-* [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package)
+* [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package on [NPM](https://www.npmjs.com/package/seguid))
 * [**seguid**](https://seguid-python.seguid.org/) (Python package on [PyPI](https://pypi.org/project/seguid/))
 * [**seguid**](https://seguid-r.seguid.org/) (R package on [CRAN](https://cran.r-project.org/package=seguid))
 * [**seguid**](https://github.com/seguid/seguid-tcl/) (Tcl script)
