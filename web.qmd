@@ -16,7 +16,7 @@ format: html
     <link rel="shortcut icon" href="/static/favicon.ico">
     <!-- <script src="/js/seguid.js"></script> -->
     <script
-        src="https://rawcdn.githack.com/seguid/seguid-javascript/8f110ff8b3ae6532cd9f6589f667a545fbecc304/seguid.js"></script>
+        src="https://rawcdn.githack.com/seguid/seguid-javascript/0.2.0/seguid.js"></script>
     <title>SEGUID CALCULATOR</title>
 </head>
 
