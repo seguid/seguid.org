@@ -65,6 +65,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://rawcdn.githack.com/seguid/seguid-javascript/0.2.0/seguid.js"></script>
+<script src="https://rawcdn.githack.com/seguid/seguid-calculator/0.1.0/seguid-calculator.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -119,6 +122,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Live Demo</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-live-demo">    
+        <li>
+    <a class="dropdown-item" href="./demo-seguid-calculator.html">
+ <span class="dropdown-text">Demo: SEGUID Calculator</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="./demo-python.html">
  <span class="dropdown-text">Demo: Python package <strong>seguid</strong></span></a>
@@ -184,31 +191,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div id="seguid-calculator">
 
-
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./static/stylesheet.css">
-    <link rel="shortcut icon" href="./static/favicon.ico">
-
-    <script src="https://rawcdn.githack.com/seguid/seguid-javascript/0.2.0/seguid.js"></script>
-    <script src="https://rawcdn.githack.com/seguid/seguid-calculator/0.1.0/seguid-calculator.js"></script>
-
-    <title>SEGUID v2 Calculator</title>
-
-
-
-
-    <div id="seguid-calculator"></div>
-
-    <script>
-       seguid_calulator();
-    </script>
-
+</div>
+<script>
+seguid_calulator();
+</script>
 
 
 
@@ -638,4 +626,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/seguid/seguid.org/blob/main/web.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/seguid/seguid.org/edit/main/web.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/seguid/seguid.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/seguid/seguid.org/blob/main/demo-seguid-calculator.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/seguid/seguid.org/edit/main/demo-seguid-calculator.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/seguid/seguid.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
