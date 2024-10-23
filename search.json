@@ -28,6 +28,13 @@
     "text": "It is critical that any SEGUID checksums generated are correct. We have composed a set of unit tests, seguid-tests, that validate the correctness of any implementation. All SEGUID v2 implementations have to pass these tests before being released. We rely on continuous integration (CI) tests on GitHub Actions to check every modification to the different codebases. Any future implementation in another programming language has to undergo the same strict testing."
   },
   {
+    "objectID": "demo-seguid-calculator.html",
+    "href": "demo-seguid-calculator.html",
+    "title": "SEGUID v2 Calculator",
+    "section": "",
+    "text": "See seguid-calculator for how to include this calculator in any webpage."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
