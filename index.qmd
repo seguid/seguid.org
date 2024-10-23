@@ -62,6 +62,70 @@ strand, the produced checksums are identical.
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
 
+### JavaScript
+
+```javascript
+> const seguid = await import('./seguid.js')
+
+> await seguid.cdseguid("TATGCCAA", "TTGGCATA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+
+## Same swapping Watson and Crick 
+> await seguid.cdseguid("TTGGCATA", "TATGCCAA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+> await seguid.cdseguid("AATATGCC", "GGCATATT")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+```
+
+### Tcl
+
+```tcl
+% source seguid
+
+% puts [seguid::cdseguid "TATGCCAA" "TTGGCATA"]
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick 
+% puts [seguid::cdseguid "TTGGCATA" "TATGCCAA"]
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+% puts [seguid::cdseguid "AATATGCC" "GGCATATT"]
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
+
+
+### CLI (Python)
+
+```sh
+$ python -m seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ python -m seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ python -m seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
+
+### CLI (R)
+
+```sh
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ Rscript -e seguid::seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
 
 ### CLI (JavaScript)
 
@@ -78,38 +142,6 @@ $ npx seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
 cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
 
-
-### CLI (Python)
-
-
-```sh
-$ python -m seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same swapping Watson and Crick
-$ python -m seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same rotating two basepairs (= minimal rotation by Watson)
-$ python -m seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-```
-
-
-### CLI (R)
-
-```sh
-$ Rscript -e seguid::seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same swapping Watson and Crick
-$ Rscript -e seguid::seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same rotating two basepairs (= minimal rotation by Watson)
-$ Rscript -e seguid::seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-```
 
 ### CLI (Tcl)
 
