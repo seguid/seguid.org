@@ -20,6 +20,8 @@ website:
             url:  https://github.com/seguid/seguid-tcl/
       - text: Live Demo
         menu:
+          - text: "Demo: SEGUID Calculator"
+            href: demo-seguid-calculator.html
           - text: "Demo: Python package <strong>seguid</strong>"
             href: demo-python.html
           - text: "Demo: R package <strong>seguid</strong>"
