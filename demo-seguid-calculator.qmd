@@ -10,6 +10,14 @@ header-includes:
 ::: {#seguid-calculator}
 :::
 
+
+<p style="margin-top: 3ex">
+
+See [seguid-calculator](https://github.com/seguid/seguid-calculator/)
+for how to include this calculator in any webpage.
+
+</p>
+
 <script>
 seguid_calulator();
 </script>
