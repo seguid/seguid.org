@@ -28,7 +28,6 @@ website:
             href: demo-r.html
       - quality.qmd
       - publications.qmd
-      - about.qmd
     right:
       - icon: github
         href: https://github.com/seguid/seguid.org/
