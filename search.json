@@ -35,13 +35,6 @@
     "text": "See seguid-calculator for how to include this calculator in any webpage."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "demo-python.html",
     "href": "demo-python.html",
     "title": "Demo: Python package seguid",
