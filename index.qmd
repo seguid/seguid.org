@@ -28,6 +28,23 @@ strand, the produced checksums are identical.
 
 ::: {.panel-tabset}
 
+### JavaScript
+
+```javascript
+> const seguid = await import('./seguid.js')
+
+> await seguid.cdseguid("TATGCCAA", "TTGGCATA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+
+## Same swapping Watson and Crick 
+> await seguid.cdseguid("TTGGCATA", "TATGCCAA")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+> await seguid.cdseguid("AATATGCC", "GGCATATT")
+'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
+```
+
 ### Python
 
 ```python
@@ -62,23 +79,6 @@ strand, the produced checksums are identical.
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
 
-### JavaScript
-
-```javascript
-> const seguid = await import('./seguid.js')
-
-> await seguid.cdseguid("TATGCCAA", "TTGGCATA")
-'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
-
-## Same swapping Watson and Crick 
-> await seguid.cdseguid("TTGGCATA", "TATGCCAA")
-'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
-
-## Same rotating two basepairs (= minimal rotation by Watson)
-> await seguid.cdseguid("AATATGCC", "GGCATATT")
-'cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A'
-```
-
 ### Tcl
 
 ```tcl
@@ -96,6 +96,37 @@ cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
 
+
+### CLI (JavaScript)
+
+```sh
+$ npx seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ npx seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ npx seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
+
+
+### CLI (Perl)
+
+```sh
+$ perl seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same swapping Watson and Crick
+$ perl seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+$ perl seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
+cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
+```
 
 ### CLI (Python)
 
@@ -127,22 +158,6 @@ $ Rscript -e seguid::seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
 cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ```
 
-### CLI (JavaScript)
-
-```sh
-$ npx seguid --type=cdseguid <<< 'TATGCCAA;TTGGCATA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same swapping Watson and Crick
-$ npx seguid --type=cdseguid <<< 'TTGGCATA;TATGCCAA'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-
-## Same rotating two basepairs (= minimal rotation by Watson)
-$ npx seguid --type=cdseguid <<< 'AATATGCC;GGCATATT'
-cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
-```
-
-
 ### CLI (Tcl)
 
 ```sh
@@ -165,9 +180,10 @@ cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A
 ## Availability
 
 Implementations of above SEGUID methods are currently available for
-JavaScript, Python, R, and Tcl;
+JavaScript, Perl, Python, R, and Tcl;
 
 * [**seguid**](https://github.com/seguid/seguid-javascript/) (JavaScript package on [NPM](https://www.npmjs.com/package/seguid))
+* [**seguid**](https://github.com/seguid/seguid-perl/) (Perl package)
 * [**seguid**](https://seguid-python.seguid.org/) (Python package on [PyPI](https://pypi.org/project/seguid/))
 * [**seguid**](https://seguid-r.seguid.org/) (R package on [CRAN](https://cran.r-project.org/package=seguid))
 * [**seguid**](https://github.com/seguid/seguid-tcl/) (Tcl script)

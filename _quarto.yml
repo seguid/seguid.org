@@ -12,6 +12,8 @@ website:
         menu:
           - text: "<strong>seguid</strong> (JavaScript package)"
             url:  https://github.com/seguid/seguid-javascript/
+          - text: "<strong>seguid</strong> (Perl package)"
+            url:  https://github.com/seguid/seguid-perl/
           - text: "<strong>seguid</strong> (Python package)"
             url:  https://seguid-python.seguid.org
           - text: "<strong>seguid</strong> (R package)"
