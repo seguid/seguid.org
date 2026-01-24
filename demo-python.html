@@ -229,7 +229,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"await micropip.install(\"seguid\")\nfrom seguid import *","id":1,"options":{"autorun":"true","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"true","results":"markup","warning":"true"}},{"code":"lsseguid(\"GATTACA\")","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"csseguid(\"GATTACA\")","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"from seguid import *","id":1,"options":{"autorun":"true","classes":"","comment":"","context":"setup","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"lsseguid(\"GATTACA\")","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"GATTACA\", \"TGTAATC\")","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"-ATTACA\", \"--TAATC\")","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"csseguid(\"GATTACA\")","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cdseguid(\"GATTACA\", \"TGTAATC\")","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"lsseguid(\"QSALTQPASV\", alphabet = \"{protein}\")","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ldseguid(\"TTGmGCAA\", \"TTGC1CAA\", alphabet = \"{DNA},m1,h2,f3,c4\")","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -391,9 +391,20 @@ globalThis.qpyodideInstance = await import(
     from matplotlib import pyplot as plt
     `);
 
+    // Install packages specified in the YAML header
+    if (qpyodideSetupPythonPackages && qpyodideInstallPythonPackagesList.length > 0) {
+      qpyodideUpdateStatusHeaderSpinner("Installing Python Packages");
+      for (const pkg of qpyodideInstallPythonPackagesList) {
+        if (pkg && pkg !== '') {
+          console.log(`Installing package: ${pkg}`);
+          await mainPyodide.runPythonAsync(`await micropip.install("${pkg}")`);
+        }
+      }
+    }
+
     // Unlock interactive buttons
     qpyodideSetInteractiveButtonState(
-      `<i class="fa-solid fa-play qpyodide-icon-run-code"></i> <span>Run Code</span>`, 
+      `<i class="fa-solid fa-play qpyodide-icon-run-code"></i> <span>Run Code</span>`,
       true
     );
 
@@ -569,22 +580,17 @@ globalThis._qpyodideGetInstance = function() {
 
 <p>This is an online demo of the Python package <strong><a href="https://seguid-python.seguid.org/">seguid</a></strong> and the SEGUID v2 algorithm. The below examples run an Python instance completely within your web browser based on <a href="https://pyodide.org/en/stable/">Pyodide</a> and <a href="https://webassembly.org/">WebAssembly</a> via <a href="https://github.com/coatless-quarto/pyodide">coatless/pyodide</a>.</p>
 <p>To run the examples, click ‘Run Code’. Feel free to edit any of them as you prefer. Nothing you type or enter below leaves your web browser. See <strong><a href="https://seguid-python.seguid.org/">seguid</a></strong> for the details on these functions, including what type of arguments they take.</p>
-<p>Requirement: Until <a href="https://github.com/coatless-quarto/pyodide/issues/5">coatless/pyodide#5</a> has been implemented, you must run the following code-snippet once:</p>
+<!--
+
+NOTE: This requires that the following 'coatless/pyodide' patches have
+been applied:
+
+* https://github.com/coatless-quarto/pyodide/pull/31
+* https://github.com/coatless-quarto/pyodide/pull/32
+
+-->
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>WARNING: In order for the code snippets to work, you must click ‘Run Code’ on the above code snippet once.</em></p>
-</div>
-</div>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <section id="linear-single-stranded-dna" class="level3">
@@ -1563,6 +1569,56 @@ qpyodideCellDetails.map(
       qpyodideCreateCell(entry);
     }
   );
+
+// Auto-run cells that have autorun option set
+(async function() {
+  // Wait for Pyodide to be fully ready (poll until mainPyodide is available)
+  const waitForPyodide = () => {
+    return new Promise((resolve) => {
+      const check = () => {
+        if (typeof mainPyodide !== 'undefined' && mainPyodide) {
+          resolve(mainPyodide);
+        } else {
+          setTimeout(check, 100);
+        }
+      };
+      check();
+    });
+  };
+
+  await waitForPyodide();
+
+  // Run cells with autorun option
+  for (const entry of qpyodideCellDetails) {
+    if (entry.options?.autorun === 'true' || entry.options?.autorun === true) {
+      try {
+        await mainPyodide.loadPackagesFromImports(entry.code);
+        const output = await mainPyodide.runPythonAsync(entry.code);
+
+        // Display output in the cell's output area if it exists
+        const outputDiv = document.getElementById(`qpyodide-output-code-area-${entry.id}`);
+        if (outputDiv && output) {
+          const pre = document.createElement("pre");
+          const div = document.createElement("div");
+          div.textContent = String(output);
+          pre.appendChild(div);
+          outputDiv.innerHTML = "";
+          outputDiv.appendChild(pre);
+        }
+      } catch (err) {
+        const outputDiv = document.getElementById(`qpyodide-output-code-area-${entry.id}`);
+        if (outputDiv) {
+          const pre = document.createElement("pre");
+          pre.style.color = "red";
+          pre.textContent = String(err);
+          outputDiv.innerHTML = "";
+          outputDiv.appendChild(pre);
+        }
+      }
+    }
+  }
+})();
+
 </script>
 
 
