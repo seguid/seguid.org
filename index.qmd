@@ -3,11 +3,6 @@ title: "SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded B
 bibliography: references.bib
 ---
 
-::: {.callout-warning}
-This is work under construction! Please do **not** use this in
-production until we've officially released SEGUID v2.
-:::
-
 The SEquence Globally Unique IDentifier (SEGUID) checksum
 [@BabniggGiometti_2006] was introduced to provide a stable, unifying
 key for the same sequence in different databases facilitating linking
