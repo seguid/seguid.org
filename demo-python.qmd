@@ -1,6 +1,7 @@
 ---
 title: "Demo: Python package seguid"
 format: html
+engine: markdown
 filters:
   - pyodide
 pyodide:
