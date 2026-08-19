@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences – SEGUID v2</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -59,7 +65,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -87,15 +92,14 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e3adbaa939bcd423dddc8c8a834270b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -252,20 +256,7 @@ div.csl-indent {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is work under construction! Please do <strong>not</strong> use this in production until we’ve officially released SEGUID v2.</p>
-</div>
-</div>
-<p>The SEquence Globally Unique IDentifier (SEGUID) checksum <span class="citation" data-cites="BabniggGiometti_2006">(<a href="#ref-BabniggGiometti_2006" role="doc-biblioref">Babnigg and Giometti 2006</a>)</span> was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 <span class="citation" data-cites="Pereira_etal_2024">(<a href="#ref-Pereira_etal_2024" role="doc-biblioref">Pereira et al. 2024</a>)</span> extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
+<p>The SEquence Globally Unique IDentifier (SEGUID) checksum <span class="citation" data-cites="BabniggGiometti_2006">(<a href="#ref-BabniggGiometti_2006" role="doc-biblioref">Babnigg and Giometti 2006</a>)</span> was introduced to provide a stable, unifying key for the same sequence in different databases facilitating linking protein sequences across databases. SEGUID v2 <span class="citation" data-cites="Pereira_etal_2026">(<a href="#ref-Pereira_etal_2026" role="doc-biblioref">Pereira 2026</a>)</span> extends the original SEGUID method to support also double-stranded sequences (e.g.&nbsp;DNA) and circular sequences (e.g.&nbsp;proteins and double-stranded DNA).</p>
 <p><img src="figures/cdseguid.png" class="img-fluid"></p>
 <section id="example-seguid-v2-for-circular-double-stranded-dna" class="level2">
 <h2 class="anchored" data-anchor-id="example-seguid-v2-for-circular-double-stranded-dna">Example: SEGUID v2 for circular double-stranded DNA</h2>
@@ -316,18 +307,18 @@ Warning
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode tcl code-with-copy"><code class="sourceCode tcl"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>% <span class="kw">source</span> seguid</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode tcl code-with-copy"><code class="sourceCode tcl"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> <span class="kw">source</span> seguid</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>% <span class="kw">puts</span> <span class="kw">[</span>seguid::cdseguid <span class="st">"TATGCCAA"</span> <span class="st">"TTGGCATA"</span><span class="kw">]</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> <span class="kw">puts</span> <span class="kw">[</span>seguid<span class="op">::</span>cdseguid <span class="st">"TATGCCAA"</span> <span class="st">"TTGGCATA"</span><span class="kw">]</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>cdseguid<span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Same swapping Watson and Crick </span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>% <span class="kw">puts</span> <span class="kw">[</span>seguid::cdseguid <span class="st">"TTGGCATA"</span> <span class="st">"TATGCCAA"</span><span class="kw">]</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> <span class="kw">puts</span> <span class="kw">[</span>seguid<span class="op">::</span>cdseguid <span class="st">"TTGGCATA"</span> <span class="st">"TATGCCAA"</span><span class="kw">]</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>cdseguid<span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">## Same rotating two basepairs (= minimal rotation by Watson)</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>% <span class="kw">puts</span> <span class="kw">[</span>seguid::cdseguid <span class="st">"AATATGCC"</span> <span class="st">"GGCATATT"</span><span class="kw">]</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">%</span> <span class="kw">puts</span> <span class="kw">[</span>seguid<span class="op">::</span>cdseguid <span class="st">"AATATGCC"</span> <span class="st">"GGCATATT"</span><span class="kw">]</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>cdseguid<span class="op">=</span>dUxN7YQyVInv3oDcvz8ByupL44A</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npx seguid <span class="at">--type</span><span class="op">=</span>cdseguid <span class="op">&lt;&lt;&lt;</span> <span class="st">'TATGCCAA;TTGGCATA'</span></span>
@@ -407,12 +398,12 @@ Warning
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-BabniggGiometti_2006" class="csl-entry" role="listitem">
 Babnigg, György, and Carol S Giometti. 2006. <span>“<span class="nocase">A database of unique protein sequence identifiers for proteome studies</span>.”</span> <em>Proteomics</em> 6 (16): 4514–22. <a href="https://doi.org/10.1002/pmic.200600032">https://doi.org/10.1002/pmic.200600032</a>.
 </div>
-<div id="ref-Pereira_etal_2024" class="csl-entry" role="listitem">
-Pereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson. 2024. <span>“<span class="nocase">SEGUID v2</span>: Extending <span>SEGUID</span> Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.”</span> <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2024.02.28.582384">https://doi.org/10.1101/2024.02.28.582384</a>.
+<div id="ref-Pereira_etal_2026" class="csl-entry" role="listitem">
+Pereira, Paulo César AND Davis, Humberto AND Silva. 2026. <span>“SEGUID V2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.”</span> <em>PLOS ONE</em> 21 (August): 1–16. <a href="https://doi.org/10.1371/journal.pone.0346164">https://doi.org/10.1371/journal.pone.0346164</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
