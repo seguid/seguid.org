@@ -6,7 +6,7 @@ bibliography: references.bib
 The SEquence Globally Unique IDentifier (SEGUID) checksum
 [@BabniggGiometti_2006] was introduced to provide a stable, unifying
 key for the same sequence in different databases facilitating linking
-protein sequences across databases.  SEGUID v2 [@Pereira_etal_2024]
+protein sequences across databases.  SEGUID v2 [@Pereira_etal_2026]
 extends the original SEGUID method to support also double-stranded
 sequences (e.g. DNA) and circular sequences (e.g. proteins and
 double-stranded DNA).
